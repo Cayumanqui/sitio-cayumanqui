@@ -170,7 +170,7 @@ body {
 /* Alertas */
 
 .modal-stock {
-  display: block; /* Cambia a 'none' cuando no quieras mostrarla y block cuando si */
+  display: none; /* Cambia a 'none' cuando no quieras mostrarla y block cuando si */
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -214,6 +214,7 @@ body {
   height: auto;
   margin-bottom: 10px;
 }
+
 
 
 
