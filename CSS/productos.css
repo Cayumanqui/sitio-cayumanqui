@@ -1,0 +1,308 @@
+/*
+    Autor: Isaac Fernández
+    Fecha de creación: 26/07/2025
+    Última modificación: 02/08/2025
+*/
+
+/* Menú */
+
+.custom-navbar {
+    background-color: #00c3ff; /* azul agua */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+  
+.custom-navbar .navbar-nav .nav-link {
+    color: white; /* color de los enlaces */
+}
+  
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #e0f7fa; /* color al pasar el mouse */
+}
+  
+.custom-navbar .navbar-brand {
+    color: white;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: #003333;
+    background-image: url('../Imagenes/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Submenu PC */
+
+.submenu-catalogo {
+  background-color: #f8f9fa;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.submenu-catalogo a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.submenu-catalogo a:hover {
+  color: #00acc1;
+}
+
+/* Subenu celular */
+
+.dropdown-menu {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 245px;
+    width: 100%;
+}
+
+.btn-catalogo {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.btn-catalogo:hover {
+    background-color: #005f56;
+    color: #ffffff;
+}
+
+/* Botón hacia arriba */
+
+#btn-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#btn-top:hover {
+    background-color: #005f56;
+}
+
+
+/* Catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.catalogo-header {
+    background-color: #e0f7fa; /* mismo fondo que el resto, o cámbialo */
+    color: #00796b; /* verde agua */
+}
+  
+.catalogo-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}  
+
+/* Tarjetas */
+
+.titulo {
+    text-align: center;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #00796b;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.producto {
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.titulo-producto {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitulo {
+    background-color: #b2ebf2;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #00796b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.caracteristicas {
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.precio {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #00796b;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.codigo    {
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.linea {
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .catalogo {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+/* Whatsapp */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-out forwards;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+
+.pie-pagina {
+    background-color: #e0f7fa; /* azul claro */
+    color: #004d40;
+    font-size: 15px;
+}
+  
+.pie-pagina h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.pie-pagina a {
+    text-decoration: none;
+    color: #00796b;
+}
+
+.pie-pagina p {
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.pie-pagina a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+.logo-footer {
+    width: 200px;
+    margin-left: -100px;
+}
+
+.footer-redes {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconos-redes a {
+    font-size: 24px;
+    color: #00796b;
+    transition: transform 0.2s ease;
+}
+
+.iconos-redes a:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,177 @@
+<!--Autor: Isaac Fernández
+    Fecha de creación: 26/07/2025
+    Última modificación: 07/08/2025
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agua Purificada Cayumanqui</title>
+    <link rel="icon" type="image/png" href="CSS/Imagenes/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="CSS/estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="HTML/productos.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="HTML/rutas.html">Rutas de Despacho</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="HTML/nosotros.html">Acerca de Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Carrusel Catálogo-->
+    <div class="carrusel-contenedor mx-auto">
+        <div id="carruselCatalogo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="HTML/productos.html">
+                        <img src="Imagenes/catalogo1.png" class="d-block w-100" alt="Catálogo 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="HTML/productos.html">
+                        <img src="Imagenes/catalogo2.jpg" class="d-block w-100" alt="Catálogo 2">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="HTML/productos.html">
+                        <img src="Imagenes/catalogo3.jpg" class="d-block w-100" alt="Catálogo 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sección de bienvenida-->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="row align-items-center bienvenida-section">
+                <div class="col-md-6 text-center text-md-start p-3">
+                    <h2 class="fw-bold">¡Bienvenido a Cayumanqui!</h2>
+                    <p>¿Buscas agua de calidad y atención personalizada? Estás en el lugar correcto.</p>
+                    <p class="mb-3">Revisa nuestro catálogo y haz tu pedido fácil y rápido.</p>
+                    <a href="HTML/productos.html" class="btn btn-success">Ver Productos</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img_catalogo/bidones.png" alt="Bidones Cayumanqui" class="img-fluid bidones-img">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="card p-3 shadow-sm beneficios-box">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">🗓</th>
+                                <th scope="col">📍 Beneficios Con Nosotros</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🚚</td>
+                                <td>Entregas Expeditas en toda la región.</td>
+                            </tr>
+                            <tr>
+                                <td>🧼</td>
+                                <td>Agua purificada limpia, filtrada y con Resolución Sanitaria.</td>
+                            </tr>
+                            <tr>
+                                <td>📞</td>
+                                <td>Atención Directa por Whatsapp.</td>
+                            </tr>
+                            <tr>
+                                <td>🛒</td>
+                                <td>Catálogo de Productos, por encargo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="parrafo text-center">¿Quieres hacer un pedido? Contáctanos.
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Botón de whatsapp-->
+    
+    <a href="https://wa.me/56952281586?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20agua%20purificada." target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i> Pedir por Whatsapp
+    </a>
+
+    <footer class="pie-pagina mt-5">
+        <div class="grupo-1 container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>ACERCA DE</h5>
+                    <p>Empresa familiar ubicada en Quillón, dedicada a la captación, tratamiento, purificación y distribución de agua desde el año 2021. Nuestro proceso cumple con estándares sanitarios y es supervisado regularmente. <br><br>
+                    Resolución Sanitaria: N° 2016439392</p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>CONTACTOS</h5>
+                    <p><i class="fa-solid fa-phone"></i> +569 52281586</p>
+                    <p><i class="fa-solid fa-phone"></i> +569 21829290</p>
+                    <p><i class="fa-brands fa-envelope"></i> aguasdelcayumanqui@gmail.com</p>
+                    <p><i class="fa-solid fa-clock"></i> Horario de Atención:
+                        lunes a viernes 09:00 - 18:00 y sábados 09:00 - 13:00
+                    </p>
+                    <p><i class="fa-solid fa-location-dot"></i> Av. Bernardo O'higgins Poniente 1780, Quillón, Ñuble</p>
+                </div>
+
+                <div class="col-md-4 mb-3 d-flex flex-column align-items-center text-center">
+                    <a href="index.html">
+                        <img src="Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
+                    </a>
+                    <h5 class="footer-redes mb-2">SÍGUENOS EN NUESTRAS REDES</h5>
+                    <div class="iconos-redes">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="icono" href="https://www.facebook.com/agua.cayumanqui/?locale=es_LA" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo-2 text-center py-3" style="background-color: #000000;">
+            <small>&copy; 2025 <strong>Agua Purificada Cayumanqui</strong> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <div id="alerta-stock" class="modal-stock">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h4>¡En Horabuena, Producto Disponible!</h4>
+            <img src="img_catalogo/bidon20lt.png" alt="Producto en stock" class="img-modal">
+            <p>Ya tenemos stock de <strong>Bidones de 6L</strong>. ¡Haz tu pedido ahora!</p>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>document.querySelector(".cerrar").addEventListener("click", function() { document.getElementById("alerta-stock").style.display = "none";});</script>
+
+
+</body>
+</html>
