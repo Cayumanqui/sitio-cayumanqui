@@ -59,7 +59,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #00c3ff;
     color: #003333;
-    background-image: url('../CSS/Imagenes/fondo.png');
+    background-image: url('../Imagenes/fondo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -301,3 +301,4 @@ body {
   height: auto;
   margin-bottom: 10px;
 }
+
