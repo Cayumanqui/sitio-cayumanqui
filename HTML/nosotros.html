@@ -1,6 +1,6 @@
 <!--Autor: Isaac Fernández
     Fecha de creación: 27/07/2025
-    Última modificación: 02/08/2025
+    Última modificación: 13/08/2025
 -->
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar" id="mainMenu">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
                 <img src="../Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
@@ -106,5 +106,20 @@
             <small>&copy; 2025 <strong>Agua Purificada Cayumanqui</strong> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        const menu = document.getElementById('mainMenu');
+        const triggerPoint = menu.offsetTop;
+
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > triggerPoint) {
+            menu.classList.add('fixed');
+        } else {
+            menu.classList.remove('fixed');
+        }
+        });
+    </script>
+    
 </body>
 </html>
