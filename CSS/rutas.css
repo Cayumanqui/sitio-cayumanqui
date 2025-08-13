@@ -1,14 +1,25 @@
 /*
     Autor: Isaac Fernández
     Fecha de creación: 27/07/2025
-    Última modificación: 02/08/2025
+    Última modificación: 13/08/2025
 */
 
 /* Menú */
 
 .custom-navbar {
-    background-color: #00c3ff; /* azul agua */
+    background-color: #00c3ff;
     font-family: 'Montserrat', sans-serif;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.custom-navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #00c3ff;
 }
 
 .navbar-nav .nav-item {
@@ -157,4 +168,5 @@ body {
 
 .iconos-redes a:hover {
     transform: scale(1.2);
+
 }
