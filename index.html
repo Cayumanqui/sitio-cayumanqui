@@ -1,6 +1,6 @@
 <!--Autor: Isaac Fernández
     Fecha de creación: 26/07/2025
-    Última modificación: 07/08/2025
+    Última modificación: 13/08/2025
 -->
 
 <!DOCTYPE html>
@@ -9,17 +9,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agua Purificada Cayumanqui</title>
-    <link rel="icon" type="image/png" href="Imagenes/favicon.png">
+    <link rel="icon" type="image/png" href="CSS/Imagenes/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="CSS/estilos.css" rel="stylesheet">
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar" id="mainMenu">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="CSS/Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -36,79 +36,110 @@
         </div>
     </nav>
 
-    <!--Carrusel Catálogo-->
-    <div class="carrusel-contenedor mx-auto">
-        <div id="carruselCatalogo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="HTML/productos.html">
-                        <img src="Imagenes/catalogo1.png" class="d-block w-100" alt="Catálogo 1">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="HTML/productos.html">
-                        <img src="Imagenes/catalogo2.jpg" class="d-block w-100" alt="Catálogo 2">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="HTML/productos.html">
-                        <img src="Imagenes/catalogo3.jpg" class="d-block w-100" alt="Catálogo 3">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--Sección de bienvenida-->
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="row align-items-center bienvenida-section">
-                <div class="col-md-6 text-center text-md-start p-3">
-                    <h2 class="fw-bold">¡Bienvenido a Cayumanqui!</h2>
-                    <p>¿Buscas agua de calidad y atención personalizada? Estás en el lugar correcto.</p>
-                    <p class="mb-3">Revisa nuestro catálogo y haz tu pedido fácil y rápido.</p>
-                    <a href="HTML/productos.html" class="btn btn-success">Ver Productos</a>
+    <section class="bienvenida-section">
+        <div class="container-bienvenida">
+            <div class="row align-items-center">
+            <div class="col-md-6 text-center p-3">
+                <h2 class="fw-bold">¡Bienvenido a Cayumanqui!</h2>
+                <p>¿Buscas agua de calidad y atención personalizada? Estás en el lugar correcto.</p>
+                <p class="mb-3">Revisa nuestro catálogo y haz tu pedido fácil y rápido.</p>
+                <a href="HTML/productos.html" class="btn btn-success">Ver Productos</a>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div id="carouselBidones" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="CSS/img_catalogo/bidones.png" class="d-block w-100 img-fluid" alt="Bidón 20 LT">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="CSS/img_catalogo/sobremesa.png" class="d-block w-100 img-fluid" alt="Bidón 10 LT">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="CSS/img_catalogo/dispremiumfrigobar.png" class="d-block w-100 img-fluid" alt="Bidón 5 LT">
+                    </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="img_catalogo/bidones.png" alt="Bidones Cayumanqui" class="img-fluid bidones-img">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Productos Destacados -->
+    <section class="py-5 text-white">
+        <div class="container-productos">
+            <h2 class="text-center mb-5 fw-bold">Productos Destacados</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="CSS/img_catalogo/bidon20lt.png" class="card-img-top" alt="Producto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bidón 20 LT</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="CSS/img_catalogo/hielo.png" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Hielo KG</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 tarjeta-centrada">
+                    <div class="card border-0">
+                        <img src="CSS/img_catalogo/hielofrappe.png" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hielo Frappé</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center">
-                <div class="card p-3 shadow-sm beneficios-box">
-                    <table class="table table-bordered">
-                        <thead class="table-light">
-                            <tr>
-                                <th scope="col">🗓</th>
-                                <th scope="col">📍 Beneficios Con Nosotros</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>🚚</td>
-                                <td>Entregas Expeditas en toda la región.</td>
-                            </tr>
-                            <tr>
-                                <td>🧼</td>
-                                <td>Agua purificada limpia, filtrada y con Resolución Sanitaria.</td>
-                            </tr>
-                            <tr>
-                                <td>📞</td>
-                                <td>Atención Directa por Whatsapp.</td>
-                            </tr>
-                            <tr>
-                                <td>🛒</td>
-                                <td>Catálogo de Productos, por encargo.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="parrafo text-center">¿Quieres hacer un pedido? Contáctanos.
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </p>
-                </div>
+            <!-- Botón Ver más -->
+            <div class="text-center mt-4">
+                <a href="HTML/productos.html" class="btn btn-blue btn-lg">Ver más</a>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-5 text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">¿Por qué elegirnos?</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <h4 class="text-purple fw-bold">🚚 Entregas Expeditas</h4>
+                    <p>En toda la región, con rapidez y compromiso.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-purple fw-bold">🧼 Agua Purificada</h4>
+                    <p>Limpia, filtrada y con Resolución Sanitaria.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-purple fw-bold">📞 Atención Directa</h4>
+                    <p>Comunicación rápida y personalizada por Whatsapp.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-purple fw-bold">🛒 Catálogo por Encargo</h4>
+                    <p>Productos disponibles bajo solicitud directa.</p>
+                </div>
+            </div>
+            <p class="text-center mt-5 fw-semibold">
+            ¿Quieres hacer un pedido? <strong>Contáctanos </strong><i class="fa-brands fa-whatsapp"></i>
+            </p>
+        </div>
+    </section>
+
+
 
     <!--Botón de whatsapp-->
     
@@ -137,8 +168,8 @@
                 </div>
 
                 <div class="col-md-4 mb-3 d-flex flex-column align-items-center text-center">
-                    <a href="index.html">
-                        <img src="Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
+                    <a href="../index.html">
+                        <img src="CSS/Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
                     </a>
                     <h5 class="footer-redes mb-2">SÍGUENOS EN NUESTRAS REDES</h5>
                     <div class="iconos-redes">
@@ -157,25 +188,33 @@
             <small>&copy; 2025 <strong>Agua Purificada Cayumanqui</strong> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <!-- Alertas -->
-    <!--
+
     <div id="alerta-stock" class="modal-stock">
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
             <h4>¡En Horabuena, Producto Disponible!</h4>
-            <img src="img_catalogo/bidon20lt.png" alt="Producto en stock" class="img-modal">
+            <img src="CSS/img_catalogo/bidon20lt.png" alt="Producto en stock" class="img-modal">
             <p>Ya tenemos stock de <strong>Bidones de 6L</strong>. ¡Haz tu pedido ahora!</p>
         </div>
     </div>
-    -->
+
     <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>document.querySelector(".cerrar").addEventListener("click", function() { document.getElementById("alerta-stock").style.display = "none";});</script>
 
+    <script>
+        const menu = document.getElementById('mainMenu');
+        const triggerPoint = menu.offsetTop;
+
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > triggerPoint) {
+            menu.classList.add('fixed');
+        } else {
+            menu.classList.remove('fixed');
+        }
+        });
+    </script>
 
 </body>
-
 </html>
-
-
