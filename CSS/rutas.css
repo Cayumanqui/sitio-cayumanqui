@@ -22,6 +22,8 @@ body {
     background-attachment: fixed;
     background-position: center;
     overflow-x: hidden;
+    min-height: 100vh;
+    padding-top: 100px;
 }
 
 /* Navbar */
@@ -248,4 +250,5 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
