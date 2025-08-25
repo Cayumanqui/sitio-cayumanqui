@@ -16,7 +16,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     color: #003333;
-    background-image: url('../CSS/Imagenes/fondo.png');
+    background-image: url('../Imagenes/fondo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -248,3 +248,4 @@ body {
         font-size: 0.8rem;
     }
 }
+
