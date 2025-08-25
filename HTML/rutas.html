@@ -1,6 +1,6 @@
 <!--Autor: Isaac Fernández
     Fecha de creación: 27/07/2025
-    Última modificación: 02/08/2025
+    Última modificación: 25/08/2025
 -->
 
 <!DOCTYPE html>
@@ -8,18 +8,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutas de Despacho</title>
-    <link rel="icon" type="image/png" href="../Imagenes/favicon.png">
+    <title>Comunas por Región</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="../CSS/rutas.css" rel="stylesheet">
+    <link href="../CSS/ejemplo.css" rel="stylesheet">
 </head>
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg custom-navbar" id="mainMenu">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
+                <img src="../CSS/Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -29,71 +28,67 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="productos.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Despacho</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Entrega</a></li>
                     <li class="nav-item"><a class="nav-link active" href="nosotros.html">Acerca de Nosotros</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Cuadro -->
-    <div class="container my-4 mt-5 tabla">
-        <div class="card p-3 shadow-sm">
-            <h5 class="mb-3 text-center titulo-rutas">🗓 Rutas de Entrega por Día</h5>
-            <table class="table table-bordered">
-                <thead class="table-light">
-                    <tr>
-                        <th scope="col">🗓 Día</th>
-                        <th scope="col">📍 Sectores de Entrega</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lunes</td>
-                        <td>Dadinco · Puente el Ala · Rucapequén · Bulnes</td>
-                    </tr>
-                    <tr>
-                        <td>Martes</td>
-                        <td>Florida · Cerro Negro · Cabrero · Monte Águila</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>Nueva Aldea · Ñipas · San Ignacio de Palomares · Batuco · Coelemu · Trehuaco · San Rafael</td>
-                    </tr>
-                    <tr>
-                        <td>Jueves</td>
-                        <td>Bulnes · Tres Esquinas · San Ignacio · Pueblo Seco · Quiriquina · El Carmen · Pemuco</td>
-                    </tr>
-                    <tr>
-                        <td>Viernes</td>
-                        <td>Concepción Centro · Nonguén · Florida</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>Quillón · Santa Ana · San Ramón · El Olivar · Las Camelias I/II · Coyanco · Huacamala · El Ciénago · Chillancito · Cerro Negro</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="info">
-                            Algunas comunas como Quillón y Bulnes son recorridas todos los días.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="parrafo text-center">¿Tu comuna no está? Contáctanos para pedidos especiales.
-                <i class="fa-brands fa-whatsapp"></i>
-            </p>
+    <div class="container container-custom">
+        <h1 class="page-title">Comunas de Entrega por Región</h1>
+        
+        <!-- Región de Ñuble -->
+        <div class="region-card">
+            <h2 class="region-title">Ñuble</h2>
+            <div class="comunas-grid">
+                <div class="comuna-item">Quillón</div>
+                <div class="comuna-item">Bulnes</div>
+                <div class="comuna-item">Ñipas</div>
+                <div class="comuna-item">San Ignacio de Palomares</div>
+                <div class="comuna-item">Coelemu</div>
+                <div class="comuna-item">Trehuaco</div>
+                <div class="comuna-item">San Rafael</div>
+                <div class="comuna-item">Tres Esquinas</div>
+                <div class="comuna-item">San Ignacio</div>
+                <div class="comuna-item">Pueblo Seco</div>
+                <div class="comuna-item">Quiriquina</div>
+                <div class="comuna-item">El Carmen</div>
+                <div class="comuna-item">Pemuco</div>
+                <div class="comuna-item">Santa Ana</div>
+                <div class="comuna-item">San Ramón</div>
+                <div class="comuna-item">El Olivar</div>
+                <div class="comuna-item">Coyanco</div>
+                <div class="comuna-item">Huacamala</div>
+                <div class="comuna-item">El Ciénago</div>
+                <div class="comuna-item">Chillancito</div>
+                <div class="comuna-item">Las Camelias I/II</div>
+            </div>
         </div>
-     </div>
-
-    
+        
+        <!-- Región del Biobío -->
+        <div class="region-card">
+            <h2 class="region-title">Biobío</h2>
+            <div class="comunas-grid">
+                <div class="comuna-item">Dadinco</div>
+                <div class="comuna-item">Puente el Ala</div>
+                <div class="comuna-item">Rucapequén</div>
+                <div class="comuna-item">Florida</div>
+                <div class="comuna-item">Cerro Negro</div>
+                <div class="comuna-item">Cabrero</div>
+                <div class="comuna-item">Monte Águila</div>
+                <div class="comuna-item">Nueva Aldea</div>
+                <div class="comuna-item">Batuco</div>
+                <div class="comuna-item">Concepción Centro</div>
+                <div class="comuna-item">Nonguén</div>
+            </div>
+        </div>
+    </div>
 
     <!--Botón de whatsapp-->
     <a href="https://wa.me/56952281586?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20agua%20purificada." target="_blank" class="whatsapp-float">
         <i class="fa-brands fa-whatsapp"></i> Pedir por Whatsapp
     </a>
-
-    <!--Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <footer class="pie-pagina mt-5">
         <div class="grupo-1 container py-4">
@@ -117,7 +112,7 @@
 
                 <div class="col-md-4 mb-3 d-flex flex-column align-items-center text-center">
                     <a href="../index.html">
-                        <img src="../Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
+                        <img src="../CSS/Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
                     </a>
                     <h5 class="footer-redes mb-2">SÍGUENOS EN NUESTRAS REDES</h5>
                     <div class="iconos-redes">
@@ -136,21 +131,7 @@
             <small>&copy; 2025 <strong>Agua Purificada Cayumanqui</strong> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script>
-        const menu = document.getElementById('mainMenu');
-        const triggerPoint = menu.offsetTop;
-
-        window.addEventListener('scroll', () => {
-        if (window.scrollY > triggerPoint) {
-            menu.classList.add('fixed');
-        } else {
-            menu.classList.remove('fixed');
-        }
-        });
-    </script>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
