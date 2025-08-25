@@ -203,7 +203,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding-top: 70px;
+        padding-top: 100px;
     }
             
     .page-title {
@@ -250,5 +250,6 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
 
