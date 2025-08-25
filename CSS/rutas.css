@@ -1,44 +1,14 @@
 /*
     Autor: Isaac Fernández
     Fecha de creación: 27/07/2025
-    Última modificación: 13/08/2025
+    Última modificación: 25/08/2025
 */
 
-/* Menú */
-
-.custom-navbar {
-    background-color: #00c3ff;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.custom-navbar.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #00c3ff;
-}
-
-.navbar-nav .nav-item {
-    margin-right: 20px;
-}
-  
-.custom-navbar .navbar-nav .nav-link {
-    color: white; /* color de los enlaces */
-}
-  
-.custom-navbar .navbar-nav .nav-link:hover {
-    color: #e0f7fa; /* color al pasar el mouse */
-}
-  
-.custom-navbar .navbar-brand {
-    color: white;
-}
-
-/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 
 body {
     margin: 0;
@@ -46,90 +16,153 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     color: #003333;
-    background-image: url('../Imagenes/fondo.png');
+    background-image: url('../CSS/Imagenes/fondo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.custom-navbar {
+    background-color: #00c3ff;
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+          
+.custom-navbar .navbar-nav .nav-link {
+    color: white;
+}
+          
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #e0f7fa;
+}
+          
+.custom-navbar .navbar-brand {
+    color: white;
 }
 
 .logo {
     height: 50px;
     margin-right: 10px;
 }
-
-/* cuadro */
-
-.info {
+        
+.region-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+        
+.region-title {
+    background: linear-gradient(45deg, #2196F3, #21CBF3);
+    color: white;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 15px 15px 0 0;
     text-align: center;
-    font-style: italic;
-    color: #000000;
-    background-color: #e0f7fa;
-    padding: 8px;
-    border-top: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-.table {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+        
+.comunas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
 }
-
-.titulo-rutas {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+        
+.comuna-item {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: #2c3e50;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
-
-.parrafo {
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 18px;
+        
+.comuna-item:hover {
+    transform: scale(1.05);
+    border-color: #3498db;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
-
-.tabla .card {
-    margin-top: 60px;
-    margin-bottom: 60px;
+        
+.container-custom {
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+        
+.page-title {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
 }
 
 /* Whatsapp */
-
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
 }
 
 @keyframes slideIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Footer */
-
 .pie-pagina {
-    background-color: #e0f7fa; /* azul claro */
+    background-color: #e0f7fa;
     color: #004d40;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
-  
+          
 .pie-pagina h5 {
     font-weight: bold;
     margin-bottom: 10px;
 }
-  
+          
 .pie-pagina a {
     text-decoration: none;
     color: #00796b;
@@ -138,15 +171,10 @@ body {
 .pie-pagina p {
     font-family: 'Montserrat', sans-serif;
 }
-  
+          
 .pie-pagina a:hover {
     color: #004d40;
     text-decoration: underline;
-}
-
-.logo-footer {
-    width: 200px;
-    margin-left: -100px;
 }
 
 .footer-redes {
@@ -168,5 +196,55 @@ body {
 
 .iconos-redes a:hover {
     transform: scale(1.2);
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+            
+    .page-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+            
+    .comunas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 1.5rem;
+        gap: 0.8rem;
+    }
+            
+    .comuna-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+            
+    .region-title {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+            
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.2rem;
+    }
+            
+    .comunas-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+            
+    .comuna-item {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
 }
