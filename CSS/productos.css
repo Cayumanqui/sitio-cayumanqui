@@ -5,22 +5,23 @@
 */
 
 
-
-/* Menú */
-
 .custom-navbar {
     background-color: #00c3ff;
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-    transition: all 0.3s ease;
+    position: fixed; /* Cambiado de relative a fixed */
+    top: 0; /* Asegurar que esté en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Aumentado para estar sobre todo */
     width: 100%;
+    transition: all 0.3s ease;
 }
 
 .custom-navbar.fixed {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
     background-color: #00c3ff;
 }
 
@@ -45,11 +46,51 @@
     margin-right: 10px;
 }
 
+/* Barra Deslizante - AJUSTADA */
+.marquee-container {
+    background: linear-gradient(135deg, #004d7a 0%, #008fb3 100%);
+    color: white;
+    position: fixed;
+    top: 76px; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
 
-/* General */
+.marquee-container.hidden {
+    transform: translateY(-100%);
+}
+
+.marquee-text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 60s linear infinite;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.marquee-item {
+    padding-right: 30px; 
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* General - AJUSTADO */
 body {
     margin: 0;
     padding: 0;
+    padding-top: 116px; /* Aumentado: navbar (~76px) + marquee (40px) */
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     color: #003333;
@@ -69,6 +110,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Espaciado después del submenu */
 }
 .submenu-catalogo a {
   text-decoration: none;
@@ -95,6 +137,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
+    margin-bottom: 20px; /* Espaciado después del botón */
 }
 
 .btn-catalogo:hover {
@@ -125,15 +168,12 @@ body {
     background-color: #005f56;
 }
 
-
 /* Catálogo */
 .catalogo {
-    
     padding: 40px;
     justify-content: center;
-    
+    margin-top: 20px; /* Espaciado adicional desde la parte superior */
 }
-
 
 .catalogo-header {
     background-color: #e0f7fa; /* mismo fondo que el resto, o cámbialo */
@@ -159,6 +199,7 @@ body {
     color: #00796b;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px; /* Espaciado después del título */
 }
 
 .producto {
@@ -166,7 +207,6 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .producto img {
     width: 100%;
@@ -183,14 +223,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 768px) {
-  .titulo-producto {
-    font-size: 15px;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .subtitulo {
     background-color: #b2ebf2;
     display: inline-block;
@@ -201,14 +233,7 @@ body {
     color: #00796b;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    
     font-size: 15px;
-}
-
-@media (max-width: 768px) {
-  .subtitulo {
-    display: none;
-  }
 }
 
 .caracteristicas {
@@ -218,12 +243,6 @@ body {
     line-height: 1.5;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
-}
-
-@media (max-width: 768px) {
-  .caracteristicas {
-    display: none;
-  }
 }
 
 .precio {
@@ -238,19 +257,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 768px) {
-  .precio {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-
-  .ver-detalles {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-}
-
-.codigo    {
+.codigo {
     font-size: 12px;
     color: #ffffff;
     margin-bottom: 15px;
@@ -286,25 +293,75 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
+/* Media queries para móviles - AJUSTADOS */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
+    body {
+        padding-top: 111px; /* navbar (~76px) + marquee (35px) */
+        overflow-x: hidden;
+    }
 
-  .catalogo {
-    padding: 20px;
-    flex-wrap: wrap;
-  }
+    .marquee-container {
+        top: 76px; /* Mantener consistente con desktop */
+        height: 35px;
+    }
 
-  .producto {
-    min-width: 0;
-    max-width: 100%;
-  }
+    .marquee-text {
+        font-size: 12px;
+    }
 
+    .marquee-item {
+        padding-right: 20px;
+    }
+
+    .catalogo {
+        padding: 20px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .producto {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .titulo-producto {
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subtitulo {
+        display: none;
+    }
+
+    .caracteristicas {
+        display: none;
+    }
+
+    .precio {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .ver-detalles {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
 }
 
-
+@media (max-width: 480px) {
+    body {
+        padding-top: 111px; /* Mantener igual que tablet */
+    }
+    
+    .marquee-text {
+        font-size: 11px;
+    }
+    
+    .marquee-item {
+        padding-right: 15px;
+    }
+}
 
 /* Whatsapp */
 
