@@ -1,6 +1,6 @@
 <!--Autor: Isaac Fernández
     Fecha de creación: 27/07/2025
-    Última modificación: 13/08/2025
+    Última modificación: 02/08/2025
 -->
 
 <!DOCTYPE html>
@@ -29,12 +29,26 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="productos.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Entrega</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Despacho</a></li>
                     <li class="nav-item"><a class="nav-link active" href="nosotros.html">Acerca de Nosotros</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Barra Deslizante -->
+    <div class="marquee-container" id="marqueeBar">
+        <div class="marquee-text">
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+        </div>
+    </div>
 
     <!-- Cuerpo -->
     <section class="nosotros">
@@ -58,7 +72,7 @@
 
     <!--Botón de whatsapp-->
     <a href="https://wa.me/56952281586?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20agua%20purificada." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i> Pedir por Whatsapp
+        <i class="fa-brands fa-whatsapp"></i> Realizar pedido
     </a>
 
     <!--Scripts-->
@@ -120,8 +134,29 @@
         }
         });
     </script>
-    
+
+    <script>
+        // Efecto de aparición/desaparición de la barra deslizante
+        let lastScrollTop = 0;
+        const marqueeBar = document.getElementById('marqueeBar');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (Math.abs(currentScroll - lastScrollTop) > scrollThreshold) {
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    // Scroll hacia abajo - ocultar barra
+                    marqueeBar.classList.add('hidden');
+                } else {
+                    // Scroll hacia arriba - mostrar barra
+                    marqueeBar.classList.remove('hidden');
+                }
+                
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
+        });
+    </script>
+
 </body>
 </html>
-
-
