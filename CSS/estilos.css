@@ -13,7 +13,7 @@ html, body {
     margin-right: 0;
 }
 
-/* Menú */
+/* Menú - CORREGIDO */
 
 .logo {
     height: 50px;
@@ -27,7 +27,7 @@ html, body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1002; /* Aumentado para dropdown móvil */
     transition: all 0.3s ease;
     width: 100%;
 }
@@ -50,15 +50,25 @@ html, body {
     color: white;
 }
 
-/* Barra Deslizante */
+/* Dropdown menu móvil - CORREGIDO */
+.navbar-collapse {
+    z-index: 1003; /* Más alto que marquee para que aparezca encima */
+}
+
+.dropdown-menu,
+.navbar-nav {
+    z-index: 1003; /* Asegurar que el menú desplegable aparezca sobre marquee */
+}
+
+/* Barra Deslizante - CORREGIDA */
 .marquee-container {
     background: linear-gradient(135deg, #004d7a 0%, #008fb3 100%);
     color: white;
     position: fixed;
-    top: 70px; /* Justo debajo del navbar */
+    top: 76px; /* Ajustado para quedar justo debajo del navbar */
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1000; /* Menor que navbar para que menú aparezca encima */
     height: 40px;
     display: flex;
     align-items: center;
@@ -90,7 +100,7 @@ html, body {
     100% { transform: translateX(-100%); }
 }
 
-/* Cuerpo */
+/* Cuerpo - CORREGIDO */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -102,7 +112,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     overflow-x: hidden;
-    padding-top: 110px; /* Mantener espacio para navbar + marquee */
+    padding-top: 116px; /* Corregido: navbar (~76px) + marquee (40px) */
     margin: 0;
 }
 
@@ -184,13 +194,14 @@ body {
     color: #ffffff;
 }
 
+/* Media queries corregidas */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px;
+        padding-top: 111px; /* navbar (~76px) + marquee (35px) */
     }
 
     .marquee-container {
-        top: 60px;
+        top: 76px; /* Mantener consistente */
         height: 35px;
     }
 
@@ -222,6 +233,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    body {
+        padding-top: 111px; /* Mantener consistente */
+    }
+
     .marquee-text {
         font-size: 11px;
     }
@@ -245,7 +260,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
+  z-index: 1001;
   opacity: 0;
   transform: translateX(-100%);
   animation: slideIn 1s ease-out forwards;
