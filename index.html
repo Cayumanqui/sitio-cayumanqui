@@ -1,6 +1,6 @@
 <!--Autor: Isaac Fernández
     Fecha de creación: 26/07/2025
-    Última modificación: 13/08/2025
+    Última modificación: 07/08/2025
 -->
 
 <!DOCTYPE html>
@@ -29,13 +29,26 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="HTML/productos.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="HTML/rutas.html">Rutas de Entrega</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="HTML/rutas.html">Rutas de Despacho</a></li>
                     <li class="nav-item"><a class="nav-link active" href="HTML/nosotros.html">Acerca de Nosotros</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Barra Deslizante -->
+    <div class="marquee-container" id="marqueeBar">
+        <div class="marquee-text">
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+        </div>
+    </div>
 
     <!--Sección de bienvenida-->
     <section class="bienvenida-section">
@@ -66,7 +79,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Productos Destacados -->
     <section class="py-5 text-white">
@@ -139,12 +151,9 @@
         </div>
     </section>
 
-
-
     <!--Botón de whatsapp-->
-    
     <a href="https://wa.me/56952281586?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20agua%20purificada." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i> Pedir por Whatsapp
+        <i class="fa-brands fa-whatsapp"></i> Realizar pedido
     </a>
 
     <footer class="pie-pagina mt-5">
@@ -168,7 +177,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3 d-flex flex-column align-items-center text-center">
-                    <a href="../index.html">
+                    <a href="index.html">
                         <img src="Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
                     </a>
                     <h5 class="footer-redes mb-2">SÍGUENOS EN NUESTRAS REDES</h5>
@@ -193,7 +202,7 @@
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
             <h4>¡En Horabuena, Producto Disponible!</h4>
-            <img src="CSS/img_catalogo/bidon20lt.png" alt="Producto en stock" class="img-modal">
+            <img src="img_catalogo/bidon20lt.png" alt="Producto en stock" class="img-modal">
             <p>Ya tenemos stock de <strong>Bidones de 6L</strong>. ¡Haz tu pedido ahora!</p>
         </div>
     </div>
@@ -204,20 +213,27 @@
     <script>document.querySelector(".cerrar").addEventListener("click", function() { document.getElementById("alerta-stock").style.display = "none";});</script>
 
     <script>
-        const menu = document.getElementById('mainMenu');
-        const triggerPoint = menu.offsetTop;
+        // Efecto de aparición/desaparición de la barra deslizante
+        let lastScrollTop = 0;
+        const marqueeBar = document.getElementById('marqueeBar');
+        const scrollThreshold = 50;
 
         window.addEventListener('scroll', () => {
-        if (window.scrollY > triggerPoint) {
-            menu.classList.add('fixed');
-        } else {
-            menu.classList.remove('fixed');
-        }
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (Math.abs(currentScroll - lastScrollTop) > scrollThreshold) {
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    // Scroll hacia abajo - ocultar barra
+                    marqueeBar.classList.add('hidden');
+                } else {
+                    // Scroll hacia arriba - mostrar barra
+                    marqueeBar.classList.remove('hidden');
+                }
+                
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
         });
     </script>
 
 </body>
 </html>
-
-
-
