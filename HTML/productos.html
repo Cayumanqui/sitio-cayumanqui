@@ -2,6 +2,7 @@
     Autor: Isaac Fernández
     fecha de creación: 26/07/2025
     Última modificación: 07/08/2025
+    Modificación: Unificación de vista móvil y PC
 -->
 
 <!DOCTYPE html>
@@ -36,30 +37,29 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="productos.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Entrega</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Despacho</a></li>
                     <li class="nav-item"><a class="nav-link active" href="nosotros.html">Acerca de Nosotros</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Submenu para PC -->
-
-    <div class="submenu-catalogo container p-3 rounded mt-3 d-none d-md-block">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-            <h4 class="mb-2 mb-md-0">Catálogo de Productos</h4>
-            <div class="d-flex gap-3 flex-wrap justify-content-end">
-                <a href="#dispensadores">Dispensadores</a>
-                <a href="#bidones">Bidones</a>
-                <a href="#hielos">Hielos</a>
-                <a href="#racks">Racks</a>
-            </div>
+    <!-- Barra Deslizante -->
+    <div class="marquee-container" id="marqueeBar">
+        <div class="marquee-text">
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
+            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
         </div>
     </div>
 
-    <!-- Submenu para celulares -->
-
-    <div class="container mt-3 d-block d-md-none text-center">
+    <!-- Submenu Unificado -->
+    <div class="container mt-3 text-center">
         <div class="dropdown">
             <button class="btn btn-catalogo dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ver Secciones del Catálogo
@@ -73,333 +73,129 @@
         </div>
     </div>
 
-
     <!--Sección de Dispensadores-->
     <section id="dispensadores" class="py-5 text-center">
         <h2 class="titulo">Dispensadores</h2>
         <div class="container">
             <div class="catalogo row justify-content-center">
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispensadorbasico.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispensadorbasico.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR BÁSICO</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Material: Plástico <br> 
-                        Dimensiones: 25 CM X 23 CM X 20 CM <br>
-                        Peso: 600 GR <br><br>
-                        ✔️ Fácil Armado. <br>
-                        ✔️ Liviano. <br>
-                        ✔️ Para Bidones de 10 LT, 12 LT y 20 LT.
-                    </p>
-                    <p class="codigo">COD: D01 </p>
+                    <p class="codigo">COD: D01</p>
                     <p class="precio">A SOLO $7.500</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D01">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D01">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/bombamanual.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bombamanual.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">BOMBA MANUAL</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Material: Plástico <br> 
-                        Colores: Blanco/Azul <br><br>
-                        ✔️ Fácil Armado. <br>
-                        ✔️ Liviano. <br>
-                        ✔️ Para Bidones de 10 LT, 12 LT y 20 LT.
-                    </p>
                     <p class="codigo">COD: D02</p>
                     <p class="precio">A SOLO $5.500</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D02">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D02">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/sobremesa.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/sobremesa.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">SOBREMESA COMPRESOR</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 47 CM X 31 CM X 26 CM <br>
-                        Peso: 10 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1500 CC <br>
-                        Sistema de Enfriado: Compresor <br>
-                        Color: Negro <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaborado con Material Plástico de Alta Calidad. <br>
-                        ✔️ Liviano y Pequeño Para Usar en Cualquier Espacio.
-                    </p>
                     <p class="codigo">COD: D03</p>
                     <p class="precio">$89.990 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D03">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D03">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/sobremesa2.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/sobremesa2.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">SOBREMESA COMPRESOR</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 47 CM X 31 CM X 26 CM <br>
-                        Peso: 10 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1500 CC <br>
-                        Sistema de Enfriado: Compresor <br>
-                        Color: Negro/Blanco <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaborado con Material Plástico de Alta Calidad. <br>
-                        ✔️ Liviano y Pequeño Para Usar en Cualquier Espacio.
-                    </p>
                     <p class="codigo">COD: D04</p>
                     <p class="precio">$89.990 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D04">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D04">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispremiumfrigobar.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispremiumfrigobar.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR PREMIUM CON FRIGOBAR</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 33 CM X 100 CM X 34 CM <br>
-                        Peso: 15 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Compresor <br><br>
-                        ✔️ 2 Llaves, Agua Caliente y Agua Helada. <br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️Con Compartimineto Inferior Refrigerado. <br>
-                        ✔️Botón Seguridad Para el Agua Caliente.
-                    </p>
                     <p class="codigo">COD: D05</p>
                     <p class="precio">A SOLO $130.000 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D05">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D05">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispremium.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispremium.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR PREMIUM</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 33 CM X 100 CM X 34 CM <br>
-                        Peso: 15 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Compresor <br><br>
-                        ✔️ 3 Llaves, Agua Caliente y Helada y Temperatura Ambiente. <br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Botón Seguridad Para el Agua Caliente.
-                    </p>
                     <p class="codigo">COD: D06</p>
                     <p class="precio">A SOLO $109.990 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D06">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D06">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispaguafriacaliente.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispaguafriacaliente.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 98 CM X 34 CM X 33 CM <br>
-                        Peso: 16 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Compresor <br>
-                        Color: Negro/Blanco <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaboración con Material Plástico de Alta Calidad. <br>
-                        ✔️ Con Cajón Inferior.
-                    </p>
                     <p class="codigo">COD: D07</p>
                     <p class="precio">A SOLO $114.990 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D07">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D07">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispaguafriacaliente2.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispaguafriacaliente2.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 05°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 98 CM X 34 CM X 33 CM <br>
-                        Peso: 14 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 2500 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Compresor <br>
-                        Color: Gris/negro <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaboración con Material Plástico de Alta Calidad. <br>
-                        ✔️ Liviano y Pequeño Para Usar en Cualquier Espacio.            
-                    </p>
                     <p class="codigo">COD: D08</p>
                     <p class="precio">A SOLO $118.000 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D08">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D08">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispaguafriacaliente3.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispaguafriacaliente3.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 10°C a 15°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 98 CM X 34 CM X 33 CM <br>
-                        Peso: 9 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 1000 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Ventilador <br>
-                        Color: Blanco <br><br>
-                        ✔️ 3 Llaves, Agua Caliente y Helada y Temperatura Ambiente. <br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Botón Seguridad Para el Agua Caliente.
-                    </p>
                     <p class="codigo">COD: D09</p>
                     <p class="precio">A SOLO $87.500 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D09">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D09">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispaguafriacaliente4.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispaguafriacaliente4.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 10°C a 10°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 98 CM X 34 CM X 33 CM <br>
-                        Peso: 9 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 1000 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Ventilador <br>
-                        Color: Grafito <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaboración con Material Plástico de Alta Calidad. <br>
-                        ✔️ Con Cajón Inferior.
-                    </p>
                     <p class="codigo">COD: D10</p>
                     <p class="precio">A SOLO $95.500 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D10">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D10">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/bombausb.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bombausb.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">BOMBA USB</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Material: Plástico <br> 
-                        Colores: Blanco/Negro/Verde <br><br>
-                        ✔️ Fácil Armado. <br>
-                        ✔️ Liviano. <br>
-                        ✔️ Para Bidones de 10 LT, 12 LT y 20 LT.
-                    </p>
                     <p class="codigo">COD: D11</p>
                     <p class="precio">A SOLO $7.500</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D11">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D11">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/bombausb2.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bombausb2.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">BOMBA USB</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Material: ABS y Acero Inoxidable <br> 
-                        Colores: Negro <br>
-                        Potencia: 5V / 4V <br><br>
-                        ✔️ Fácil Armado. <br>
-                        ✔️ Liviano. <br>
-                        ✔️ Para Bidones de 10 LT, 12 LT y 20 LT.
-                    </p>
                     <p class="codigo">COD: D12</p>
                     <p class="precio">A SOLO $15.000</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D12">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D12">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/dispensadorceramico.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/dispensadorceramico.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR CERÁMICO</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Material: Cerámica <br> 
-                        Dimensiones: 25 CM X 25 CM X 42 CM <br>
-                        Peso: 2.7 KG <br><br>
-                        ✔️ Fácil Armado. <br>
-                        ✔️ Liviano. <br>
-                        ✔️ Para Bidones de 10 LT, 12 LT y 20 LT. <br>
-                        ✔️ Incluye Patas de Madera, Llave Ajustable y Espiga Plástica.
-                    </p>
                     <p class="codigo">COD: D13</p>
                     <p class="precio">A SOLO $35.000</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D13">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D13">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/sobremesa3.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/sobremesa3.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR SOBREMESA</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 10°C a 15°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 29 CM X 39 CM X 29 CM <br>
-                        Peso: 3.2 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 1000 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Ventilador <br>
-                        Color: Blanco <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaborado con Material Plástico de Alta Calidad. <br>
-                        ✔️ Liviano y Pequeño Para Usar en Cualquier Espacio.
-                    </p>
                     <p class="codigo">COD: D14</p>
                     <p class="precio">$60.000 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D14">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D14">Ver detalles</button>
                 </div>
 
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/sobremesa4.png" alt="Dispensador de agua">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/sobremesa4.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR SOBREMESA</h4>
-                    <h5 class="subtitulo">Características</h5>
-                    <p class="caracteristicas">
-                        Temperatura Agua Fría: 10°C a 15°C <br> 
-                        Temperatura Agua Caliente: 90°C a 95°C <br>
-                        Dimensiones: 31 CM X 42 CM X 41 CM <br>
-                        Peso: 3.2 KG <br>
-                        Consumo Eléctrico: 550 W <br>
-                        Almacenaje Agua Helada: 1000 CC <br>
-                        Almacenaje Agua Caliente: 1000 CC <br>
-                        Sistema de Enfriado: Ventilador <br>
-                        Color: Negro <br><br>
-                        ✔️ Botones de Encendido y Apagado. <br>
-                        ✔️ Luces de Encendido en su Parte Frontal. <br>
-                        ✔️ Elaborado con Material Plástico de Alta Calidad. <br>
-                        ✔️ Liviano y Pequeño Para Usar en Cualquier Espacio.
-                    </p>
                     <p class="codigo">COD: D15</p>
                     <p class="precio">$60.000 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles d-md-none" data-producto="D14">Ver detalles</button>
+                    <button class="btn btn-info ver-detalles" data-producto="D15">Ver detalles</button>
                 </div>
             </div>
         </div>
@@ -410,29 +206,29 @@
         <h3 class="titulo">Bidones</h3>
         <div class="container">
             <div class="catalogo row justify-content-center">
-                <div class="col-5 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/nodisponible.png" alt="bidon6lt">
+                <div class="col-5 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/nodisponible.png" alt="bidon6lt" class="img-fluid">
                     <h4 class="titulo-producto">Bidón 6 LT</h4>
                     <p class="caracteristicas">
                         No hay stock de este producto.
                     </p>
                 </div>
-                <div class="col-5 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/nodisponible.png" alt="bidon 10lt">
+                <div class="col-5 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/nodisponible.png" alt="bidon 10lt" class="img-fluid">
                     <h4 class="titulo-producto">Bidón 10 LT</h4>
                     <p class="caracteristicas">
                         No hay stock de este producto.
                     </p>
                 </div>
-                <div class="col-5 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/nodisponible.png" alt="bidon 12lt">
+                <div class="col-5 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/nodisponible.png" alt="bidon 12lt" class="img-fluid">
                     <h4 class="titulo-producto">Bidón 12 LT</h4>
                     <p class="caracteristicas">
                         No hay stock de este producto.
                     </p>
                 </div>
-                <div class="col-5 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/bidon20lt.png" alt="bidon20lt">
+                <div class="col-5 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bidon20lt.png" alt="bidon20lt" class="img-fluid">
                     <h4 class="titulo-producto">Bidón 20 LT</h4>
                 </div>
             </div>
@@ -444,12 +240,12 @@
         <h3 class="titulo">Hielos</h3>
         <div class="container">
             <div class="catalogo row justify-content-center">
-                <div class="col-6 col-lg-2 producto text-center">
-                    <img src="../img_catalogo/hielo.png" alt="Hielo por kilo">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/hielo.png" alt="Hielo por kilo" class="img-fluid">
                     <h4>Hielo de kilo</h4>
                 </div>
-                <div class="col-6 col-lg-2  producto text-center">
-                    <img src="../img_catalogo/hielofrappe.png" alt="Hielo frappé">
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/hielofrappe.png" alt="Hielo frappé" class="img-fluid">
                     <h4>Hielo frappé</h4>
                 </div>
             </div>
@@ -461,18 +257,18 @@
         <h3 class="titulo">Racks</h3>
         <div class="container">
             <div class="catalogo-racks row justify-content-center">
-                <div class="col-6 col-lg-4 producto text-center">
-                    <img src="../img_catalogo/rack3.png" alt="Rack de 3">
+                <div class="col-6 col-lg-4 producto text-center mb-4">
+                    <img src="../img_catalogo/rack3.png" alt="Rack de 3" class="img-fluid">
                     <h4 class="titulo-producto">RACK CHICO</h4>
                     <p class="linea">Valido solo para negocios.</p>
                 </div>
-                <div class="col-6 col-lg-4 producto text-center">
-                    <img src="../img_catalogo/rack5.png" alt="Rack de 5">
+                <div class="col-6 col-lg-4 producto text-center mb-4">
+                    <img src="../img_catalogo/rack5.png" alt="Rack de 5" class="img-fluid">
                     <h4 class="titulo-producto">RACK MEDIANO</h4>
                     <p class="linea">Valido solo para negocios.</p>
                 </div>
-                <div class="col-6 col-lg-4 producto text-center">
-                    <img src="../img_catalogo/rack10.png" alt="Rack de 10">
+                <div class="col-6 col-lg-4 producto text-center mb-4">
+                    <img src="../img_catalogo/rack10.png" alt="Rack de 10" class="img-fluid">
                     <h4 class="titulo-producto">RACK GRANDE</h4>
                     <p class="linea">Válido sólo para negocios.</p>
                 </div>
@@ -480,27 +276,31 @@
         </div>
     </section>
 
-
     <!--Botón de whatsapp-->
     <a href="https://wa.me/56952281586?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20agua%20purificada." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i> Pedir por Whatsapp
+        <i class="fa-brands fa-whatsapp"></i> Realizar pedido
     </a>
 
-    <!-- Texto flotante -->
+    <!-- Modal de detalles -->
     <div id="modal-detalles" class="modal fade" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content text-start">
                 <div class="modal-header">
-                    <h5 class="modal-title">Características</h5>
+                    <h5 class="modal-title">Características del Producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" id="contenido-modal">
                     <!-- Se carga dinámicamente -->
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://wa.me/56952281586?text=Hola!%20Me%20interesa%20este%20producto." target="_blank" class="btn btn-success">
+                        <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
 
     <footer class="pie-pagina mt-5">
         <div class="grupo-1 container py-4">
@@ -545,7 +345,6 @@
     </footer>
 
     <!-- Scripts -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
@@ -854,8 +653,28 @@
         });
     </script>
 
+    <script>
+        // Efecto de aparición/desaparición de la barra deslizante
+        let lastScrollTop = 0;
+        const marqueeBar = document.getElementById('marqueeBar');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (Math.abs(currentScroll - lastScrollTop) > scrollThreshold) {
+                if (currentScroll > lastScrollTop && currentScroll > 100) {
+                    // Scroll hacia abajo - ocultar barra
+                    marqueeBar.classList.add('hidden');
+                } else {
+                    // Scroll hacia arriba - mostrar barra
+                    marqueeBar.classList.remove('hidden');
+                }
+                
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
+        });
+    </script>
 
 </body>
 </html>
-
-
