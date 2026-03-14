@@ -1,11 +1,13 @@
 /*
     Autor: Isaac Fernández
     Fecha de creación: 26/07/2025
-    Última modificación: 02/08/2025
+    Última modificación: 13/03/2026
 */
 
 html, body {
-    overflow-x: hidden; /* Elimina scroll horizontal */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .row {
@@ -13,7 +15,7 @@ html, body {
     margin-right: 0;
 }
 
-/* Menú - CORREGIDO */
+/* ========== NAVBAR CON WAVE ========== */
 
 .logo {
     height: 50px;
@@ -21,15 +23,16 @@ html, body {
 }
 
 .custom-navbar {
-    background-color: #00c3ff;
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
     font-family: 'Montserrat', sans-serif;
-    position: fixed; /* Cambiado: siempre fijo en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1002; /* Aumentado para dropdown móvil */
+    z-index: 1002;
     transition: all 0.3s ease;
     width: 100%;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
 .navbar-nav .nav-item {
@@ -37,341 +40,725 @@ html, body {
 }
   
 .custom-navbar .navbar-nav .nav-link {
-    color: white; /* color de los enlaces */
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
 }
   
 .custom-navbar .navbar-nav .nav-link:hover {
-    color: #e0f7fa; /* color al pasar el mouse */
+    color: #e0f7fa;
     transform: translateY(-2px);
-    transition: all 0.3s ease;
 }
   
 .custom-navbar .navbar-brand {
     color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
-/* Dropdown menu móvil - CORREGIDO */
+/* Navbar Wave */
+.navbar-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.navbar-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+/* Dropdown menu móvil */
 .navbar-collapse {
-    z-index: 1003; /* Más alto que marquee para que aparezca encima */
+    z-index: 1003;
 }
 
 .dropdown-menu,
 .navbar-nav {
-    z-index: 1003; /* Asegurar que el menú desplegable aparezca sobre marquee */
+    z-index: 1003;
 }
 
-/* Barra Deslizante - CORREGIDA */
-.marquee-container {
-    background: linear-gradient(135deg, #004d7a 0%, #008fb3 100%);
-    color: white;
-    position: fixed;
-    top: 76px; /* Ajustado para quedar justo debajo del navbar */
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Menor que navbar para que menú aparezca encima */
-    height: 40px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    transform: translateY(0);
+/* Navbar Toggler personalizado */
+.navbar-toggler {
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 5px 10px;
 }
 
-.marquee-container.hidden {
-    transform: translateY(-100%);
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.3);
 }
 
-.marquee-text {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    animation: marquee 60s linear infinite;
-    font-size: 14px;
-    font-weight: 500;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.marquee-item {
-    padding-right: 30px; /* Espacio entre repeticiones */
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Cuerpo - CORREGIDO */
+/* ========== BODY ========== */
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #00c3ff;
-    color: #003333;
-    background-image: url('../Imagenes/fondo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    color: #2c3e50;
+    background-color: #F5F7FA;
     overflow-x: hidden;
-    padding-top: 116px; /* Corregido: navbar (~76px) + marquee (40px) */
+    padding-top: 85px;
     margin: 0;
 }
 
-.bienvenida-section {
-    background: linear-gradient(#06e085, #00c3ff);
-    padding: 50px 0;
-    box-shadow: inset 0 -30px 40px rgba(0,0,0,0.03);
-    margin: 0;
-}
+/* ========== HERO SECTION MEJORADO ========== */
 
-.container-bienvenida {
-    max-width: 1200px;       /* Limita el ancho en pantallas grandes */
-    margin: 0 auto;          /* Centra horizontalmente */
-    padding: 0 20px;         /* Espacio lateral en móviles */
-    text-align: center;
-}
-
-#carouselBidones {
-  max-width: 300px;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.carousel-inner img {
-  object-fit: contain;
-  height: 200px;
-}
-
-.table {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-}
-
-.parrafo {
-    font-family: 'Montserrat', sans-serif; 
-    font-size: 18px;
-    color: #000;
-}
-
-.beneficios-box {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.container h2 {
-    font-size: 25px;
-}
-
-/* Productos destacados */
-
-.card-img-top {
-    max-height: 200px; 
-    object-fit: contain; 
-}
-
-.card {
-    text-align: center; 
-    background: linear-gradient(135deg, #06e085, #00c3ff); /* Degradado verde-azul */
-    border-radius: 10px;
+.hero-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f0fe 100%);
+    padding: 80px 0;
+    position: relative;
     overflow: hidden;
-    color: white; /* Para que el texto contraste */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.container-productos h2 {
-    color: #000000;
+.hero-content {
+    padding-right: 30px;
 }
 
-.btn-blue {
-    background-color: #ffffff;
-    color: #000;
-    border: none;
+.hero-badge {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
 }
 
-.btn-blue:hover {
-    background-color: #0050b8;
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #00796b;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #546e7a;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(30, 136, 229, 0.4);
+    color: white;
+}
+
+.btn-outline-custom {
+    background: white;
+    color: #1E88E5;
+    border: 2px solid #1E88E5;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background: #1E88E5;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Stats del Hero */
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-item h3 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1E88E5;
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #546e7a;
+    margin: 0;
+}
+
+/* Hero Image con sombra */
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    filter: drop-shadow(0 20px 40px rgba(0, 121, 107, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ========== PROCESO SECTION CON ONDAS ========== */
+
+.proceso-section {
+    padding: 80px 0;
+    position: relative;
+    background: linear-gradient(180deg, rgba(30, 136, 229, 0.04) 0%, rgba(0, 195, 255, 0.06) 100%);
+    overflow: hidden;
+}
+
+/* Ondas SVG */
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-top svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+/* Headers de sección */
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #546e7a;
+    font-weight: 400;
+}
+
+/* Cards del proceso */
+.proceso-card {
+    background: #ffffff;
+    padding: 35px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 195, 255, 0.1);
+    position: relative;
+    height: 100%;
+    border: 1px solid rgba(0, 195, 255, 0.1);
+}
+
+.proceso-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 195, 255, 0.2);
+    border-color: rgba(0, 195, 255, 0.3);
+}
+
+.proceso-number {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #1E88E5, #0D47A1);
     color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
 }
 
-/* Media queries corregidas */
-@media (max-width: 768px) {
-    body {
-        padding-top: 111px; /* navbar (~76px) + marquee (35px) */
-    }
-
-    .marquee-container {
-        top: 76px; /* Mantener consistente */
-        height: 35px;
-    }
-
-    .marquee-text {
-        font-size: 12px;
-    }
-
-    .marquee-item {
-        padding-right: 20px;
-    }
-
-    .container-productos .col-md-4 {
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 10px;
-    }
-
-    .tarjeta-centrada {
-        width: 100%;
-        margin-top: 20px; /* opcional, para ajustar espacio */
-        display: flex;
-        justify-content: center;
-    }
-
-    .tarjeta-centrada .card {
-        max-width: 90%;
-        margin: 0 auto;
-    }
+.proceso-icon {
+    font-size: 45px;
+    color: #1E88E5;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 480px) {
-    body {
-        padding-top: 111px; /* Mantener consistente */
-    }
-
-    .marquee-text {
-        font-size: 11px;
-    }
-    
-    .marquee-item {
-        padding-right: 15px;
-    }
+.proceso-card:hover .proceso-icon {
+    transform: scale(1.1);
+    color: #0D47A1;
 }
 
-/* Whatsapp */
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #06ca06;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 1001;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards;
-  font-family: 'Montserrat', sans-serif;
+.proceso-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 12px;
 }
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.proceso-card p {
+    font-size: 14px;
+    color: #546e7a;
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* Footer */
+/* ========== CARRUSEL DE PRODUCTOS ========== */
+
+.productos-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.productos-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.carousel-producto {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 0 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.carousel-producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.producto-badge-carousel {
+    background: linear-gradient(135deg, #FF6B6B, #FF5252);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.carousel-producto img {
+    max-height: 300px;
+    width: auto;
+    margin: 0 auto 30px;
+    display: block;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.carousel-producto h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.carousel-producto p {
+    font-size: 16px;
+    color: #546e7a;
+    margin-bottom: 20px;
+}
+
+.carousel-producto .producto-price {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1E88E5;
+    margin-bottom: 20px;
+}
+
+.btn-producto-carousel {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-producto-carousel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4);
+    color: white;
+}
+
+/* Controles del Carrusel */
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 50px;
+    color: #1E88E5;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #1E88E5;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #0D47A1;
+}
+
+/* ========== FOOTER CON WAVE MODERNO ========== */
+
+.footer-wave {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+}
 
 .pie-pagina {
-    background-color: #e0f7fa; /* azul claro */
-    color: #004d40;
+    background: linear-gradient(135deg, #263238 0%, #37474F 100%);
+    color: #eceff1;
     font-size: 15px;
+    position: relative;
+    padding-top: 0;
 }
   
 .pie-pagina h5 {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
 }
   
 .pie-pagina a {
     text-decoration: none;
-    color: #00796b;
+    color: #b0bec5;
+    transition: all 0.3s ease;
 }
 
 .pie-pagina p {
-    font-family: 'Montserrat', sans-serif;
+    color: #b0bec5;
+    line-height: 1.8;
 }
   
 .pie-pagina a:hover {
-    color: #004d40;
-    text-decoration: underline;
+    color: #1E88E5;
+    text-decoration: none;
+}
+
+.footer-text {
+    color: #b0bec5;
+    line-height: 1.8;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-contact {
+    line-height: 2;
+}
+
+.footer-contact i {
+    color: #1E88E5;
+    margin-right: 10px;
 }
 
 .logo-footer {
-    width: 200px;
-    margin-left: -100px;
+    width: 180px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
 }
 
-.footer-redes {
-    font-size: 15px;
-    white-space: nowrap;
+.footer-divider {
+    border-color: rgba(255,255,255,0.1);
+    margin: 30px 0;
+}
+
+.footer-copyright {
+    color: #90a4ae;
+    font-size: 14px;
+    margin: 0;
 }
 
 .iconos-redes {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .iconos-redes a {
     font-size: 24px;
-    color: #00796b;
-    transition: transform 0.2s ease;
+    color: #b0bec5;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .iconos-redes a:hover {
-    transform: scale(1.2);
+    transform: translateY(-5px);
+    color: #1E88E5;
+    background: rgba(30, 136, 229, 0.1);
 }
 
-/* Alertas */
+/* ========== WHATSAPP FLOTANTE ========== */
 
-.modal-stock {
-  display: none; /* Cambia a 'none' cuando no quieras mostrarla */
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  font-family: 'Montserrat', sans-serif;
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1001;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.modal-contenido {
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+    color: white;
 }
 
-.modal-contenido h4 {
-  margin-bottom: 10px;
-  font-weight: bold;
+.whatsapp-float i {
+    font-size: 20px;
 }
 
-.cerrar {
-  color: #aaa;
-  float: right;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-stats {
+        justify-content: space-around;
+    }
 }
 
-.cerrar:hover {
-  color: #000;
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar-wave svg {
+        height: 20px;
+    }
+    
+    .hero-section {
+        padding: 50px 0;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-primary-custom,
+    .btn-outline-custom {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .stat-item h3 {
+        font-size: 28px;
+    }
+    
+    .proceso-section {
+        padding: 50px 0;
+    }
+    
+    .wave-top svg,
+    .wave-bottom svg {
+        height: 40px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .proceso-card {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .proceso-icon {
+        font-size: 36px;
+    }
+    
+    .proceso-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .proceso-card h4 {
+        font-size: 16px;
+    }
+    
+    .proceso-card p {
+        font-size: 13px;
+    }
+    
+    .productos-section {
+        padding: 50px 0;
+    }
+    
+    .carousel-producto {
+        padding: 25px;
+    }
+    
+    .carousel-producto img {
+        max-height: 200px;
+    }
+    
+    .footer-wave svg {
+        height: 40px;
+    }
+    
+    .logo-footer {
+        width: 150px;
+        margin-left: 0;
+    }
+    
+    .whatsapp-float {
+        padding: 12px 20px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
 }
 
-.img-modal {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .wave-top svg,
+    .wave-bottom svg,
+    .navbar-wave svg,
+    .footer-wave svg {
+        height: 30px;
+    }
+    
+    .carousel-producto h3 {
+        font-size: 20px;
+    }
+    
+    .carousel-producto .producto-price {
+        font-size: 24px;
+    }
 }
