@@ -10,11 +10,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
-    <link rel="icon" type="image/png" href="../Imagenes/favicon.png">
+    <title>Catálogo - Cayumanqui</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="../CSS/productos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/productos.css">
 </head>
 
 <!-- Botón hacia arriba -->
@@ -23,40 +38,48 @@
 </button>
 
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg custom-navbar" id="mainMenu">
+    <!-- Navbar con Wave -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                <img src="../Imagenes/Logo.png" alt="Logo" class="logo"> <!--colocar logo-->
+                <img src="../Imagenes/Logo.png" alt="Logo Cayumanqui" class="logo">
+                <span class="d-none d-md-inline">AGUAS CAYUMANQUI</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="productos.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="rutas.html">Rutas de Despacho</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="nosotros.html">Acerca de Nosotros</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Catálogo</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link active" href="rutas.html">Puntos de Venta</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wa.me/56984535592" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
+        
+        <!-- Wave del Navbar -->
+        <div class="navbar-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+            </svg>
+        </div>
     </nav>
 
-    <!-- Barra Deslizante -->
-    <div class="marquee-container" id="marqueeBar">
-        <div class="marquee-text">
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-            <span class="marquee-item">🛒 Empresa Registrada | ✅ Resolución Sanitaria N° 2016439392 | 🚰 Desde 2021 | 📞 Atención Lun-Vie 9-18h, Sab 09-14</span>
-        </div>
-    </div>
+    
 
     <!-- Submenu Unificado -->
     <div class="container mt-3 text-center">
@@ -73,6 +96,35 @@
         </div>
     </div>
 
+    <!-- Sección Intro Catálogo -->
+    <section class="catalogo-intro" data-aos="fade-up">
+        <div class="container">
+            <div class="catalogo-intro-inner">
+                <div class="catalogo-intro-icon">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                <div class="catalogo-intro-text">
+                    <h2>En Aguas Cayumanqui nos preocupamos de que tengas el mejor servicio</h2>
+                    <p>Por eso ponemos a tu disposición toda nuestra línea de productos, para que puedas elegir la opción que mejor se adapte a ti, tu hogar o tu empresa. Explora el catálogo y encuentra lo que necesitas.</p>
+                </div>
+                <div class="catalogo-intro-stats">
+                    <div class="intro-stat">
+                        <i class="fas fa-award"></i>
+                        <span>Calidad Certificada</span>
+                    </div>
+                    <div class="intro-stat">
+                        <i class="fas fa-truck"></i>
+                        <span>Despacho a Domicilio</span>
+                    </div>
+                    <div class="intro-stat">
+                        <i class="fas fa-headset"></i>
+                        <span>Asesoría Personalizada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--Sección de Dispensadores-->
     <section id="dispensadores" class="py-5 text-center">
         <h2 class="titulo">Dispensadores</h2>
@@ -83,7 +135,7 @@
                     <h4 class="titulo-producto">DISPENSADOR BÁSICO</h4>
                     <p class="codigo">COD: D01</p>
                     <p class="precio">A SOLO $7.500</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D01">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D01">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -91,7 +143,7 @@
                     <h4 class="titulo-producto">BOMBA MANUAL</h4>
                     <p class="codigo">COD: D02</p>
                     <p class="precio">A SOLO $5.500</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D02">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D02">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -99,7 +151,7 @@
                     <h4 class="titulo-producto">SOBREMESA COMPRESOR</h4>
                     <p class="codigo">COD: D03</p>
                     <p class="precio">$89.990 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D03">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D03">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -107,7 +159,7 @@
                     <h4 class="titulo-producto">SOBREMESA COMPRESOR</h4>
                     <p class="codigo">COD: D04</p>
                     <p class="precio">$89.990 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D04">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D04">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -115,7 +167,7 @@
                     <h4 class="titulo-producto">DISPENSADOR PREMIUM CON FRIGOBAR</h4>
                     <p class="codigo">COD: D05</p>
                     <p class="precio">A SOLO $130.000 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D05">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D05">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -123,7 +175,7 @@
                     <h4 class="titulo-producto">DISPENSADOR PREMIUM</h4>
                     <p class="codigo">COD: D06</p>
                     <p class="precio">A SOLO $109.990 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D06">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D06">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -131,7 +183,7 @@
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
                     <p class="codigo">COD: D07</p>
                     <p class="precio">A SOLO $114.990 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D07">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D07">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -139,7 +191,7 @@
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
                     <p class="codigo">COD: D08</p>
                     <p class="precio">A SOLO $118.000 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D08">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D08">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -147,7 +199,7 @@
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
                     <p class="codigo">COD: D09</p>
                     <p class="precio">A SOLO $87.500 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D09">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D09">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
@@ -155,31 +207,47 @@
                     <h4 class="titulo-producto">DISPENSADOR AGUA FRÍA Y CALIENTE</h4>
                     <p class="codigo">COD: D10</p>
                     <p class="precio">A SOLO $95.500 INCLUYE 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D10">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D10">Ver detalles</button>
+                </div>
+
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bombausb.png" alt="Dispensador de agua" class="img-fluid">
+                    <h4 class="titulo-producto">BOMBA USB</h4>
+                    <p class="codigo">COD: D11</p>
+                    <p class="precio">A SOLO $7.500</p>
+                    <button class="btn-ver-detalles" data-producto="D11">Ver detalles</button>
+                </div>
+
+                <div class="col-6 col-lg-3 producto text-center mb-4">
+                    <img src="../img_catalogo/bombausb2.png" alt="Dispensador de agua" class="img-fluid">
+                    <h4 class="titulo-producto">BOMBA USB</h4>
+                    <p class="codigo">COD: D12</p>
+                    <p class="precio">A SOLO $15.000</p>
+                    <button class="btn-ver-detalles" data-producto="D12">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
                     <img src="../img_catalogo/dispensadorceramico.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR CERÁMICO</h4>
-                    <p class="codigo">COD: D11</p>
+                    <p class="codigo">COD: D13</p>
                     <p class="precio">A SOLO $35.000</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D13">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D13">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
                     <img src="../img_catalogo/sobremesa3.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR SOBREMESA</h4>
-                    <p class="codigo">COD: D12</p>
+                    <p class="codigo">COD: D14</p>
                     <p class="precio">$60.000 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D14">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D14">Ver detalles</button>
                 </div>
 
                 <div class="col-6 col-lg-3 producto text-center mb-4">
                     <img src="../img_catalogo/sobremesa4.png" alt="Dispensador de agua" class="img-fluid">
                     <h4 class="titulo-producto">DISPENSADOR SOBREMESA</h4>
-                    <p class="codigo">COD: D13</p>
+                    <p class="codigo">COD: D15</p>
                     <p class="precio">$60.000 + 2 BIDONES</p>
-                    <button class="btn btn-info ver-detalles" data-producto="D15">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-producto="D15">Ver detalles</button>
                 </div>
             </div>
         </div>
@@ -265,50 +333,73 @@
         </div>
     </div>
 
-    <footer class="pie-pagina mt-5">
-        <div class="grupo-1 container py-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>ACERCA DE</h5>
-                    <p>Empresa familiar ubicada en Quillón, dedicada a la captación, tratamiento, purificación y distribución de agua desde el año 2021. Nuestro proceso cumple con estándares sanitarios y es supervisado regularmente. <br><br>
-                    Resolución Sanitaria: N° 2016439392</p>
+    <!-- Footer -->
+    <footer>
+        <!-- Wave del Footer -->
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#263238" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+            </svg>
+        </div>
+        
+        <div class="pie-pagina">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <img src="../Imagenes/Logo.png" alt="Logo Cayumanqui" class="logo-footer">
+                        <p class="footer-text">
+                            Empresa dedicada a la distribución de agua purificada de alta calidad en las regiones de Bío Bío y Ñuble.
+                        </p>
+                        <div class="iconos-redes">
+                            <a href="#" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/56984535592" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h5>Enlaces Rápidos</h5>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="productos.html">Catálogo de Productos</a></li>
+                            <!--<li><a href="rutas.html">Puntos de Venta</a></li>-->
+                            <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <h5>Contacto</h5>
+                        <p class="footer-contact">
+                            <i class="fas fa-phone"></i> +569 52281586<br>
+                            <i class="fas fa-phone"></i> +569 21829290<br>
+                            <i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0d1d7c5d1c3d4d5dcd3d1c9c5ddd1dec1c5d9f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</a><br>
+                            <i class="fas fa-map-marker-alt"></i> Av. Bernardo O'higgins Poniente 1780, Quillón, Ñuble<br>
+                            <i class="fas fa-certificate"></i> Res. Sanitaria: 2016439392
+                        </p>
+                    </div>
                 </div>
-
-                <div class="col-md-4 mb-3">
-                    <h5>CONTACTOS</h5>
-                    <p><i class="fa-solid fa-phone"></i> +569 52281586</p>
-                    <p><i class="fa-solid fa-phone"></i> +569 21829290</p>
-                    <p><i class="fa-brands fa-envelope"></i> aguasdelcayumanqui@gmail.com</p>
-                    <p><i class="fa-solid fa-clock"></i> Horario de Atención:
-                        lunes a viernes 09:00 - 18:00 y sábados 09:00 - 13:00
-                    </p>
-                    <p><i class="fa-solid fa-location-dot"></i> Av. Bernardo O'higgins Poniente 1780, Quillón, Ñuble</p>
-                </div>
-
-                <div class="col-md-4 mb-3 d-flex flex-column align-items-center text-center">
-                    <a href="../index.html">
-                        <img src="../Imagenes/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Agua purificada">
-                    </a>
-                    <h5 class="footer-redes mb-2">SÍGUENOS EN NUESTRAS REDES</h5>
-                    <div class="iconos-redes">
-                        <a href="https://www.instagram.com/aguas.cayumanqui?igsh=dnd5aXRhM2hydTFt" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a class="icono" href="https://www.facebook.com/agua.cayumanqui/?locale=es_LA" target="_blank">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
+                
+                <hr class="footer-divider">
+                
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-copyright">
+                            &copy; 2025 Aguas Cayumanqui. Todos los derechos reservados.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="grupo-2 text-center py-3" style="background-color: #000000;">
-            <small>&copy; 2025 <strong>Agua Purificada Cayumanqui</strong> - Todos los Derechos Reservados.</small>
-        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         // Mostrar el botón al hacer scroll hacia abajo
@@ -606,7 +697,7 @@
             `
         };
 
-        document.querySelectorAll('.ver-detalles').forEach(btn => {
+        document.querySelectorAll('.btn-ver-detalles').forEach(btn => {
             btn.addEventListener('click', () => {
             const cod = btn.getAttribute('data-producto');
             document.getElementById('contenido-modal').innerHTML = detalles[cod];
@@ -630,16 +721,32 @@
                     // Scroll hacia abajo - ocultar barra
                     marqueeBar.classList.add('hidden');
                 } else {
-                    // Scroll hacia arriba - mostrar barra
+                    // Scroll hacia arriba - mostrar
                     marqueeBar.classList.remove('hidden');
                 }
-                
                 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
             }
         });
+
+        // Botón volver arriba
+        const btnTop = document.getElementById('btn-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                btnTop.style.display = 'block';
+            } else {
+                btnTop.style.display = 'none';
+            }
+        });
+        btnTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 60 });
     </script>
 
 </body>
 </html>
-
-
