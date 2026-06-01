@@ -234,6 +234,66 @@ body {
     margin-top: 20px;
 }
 
+/* ========== TARJETAS DE PROMOS ========== */
+
+.promo-card {
+    background: #FFFFFF;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(30, 136, 229, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 136, 229, 0.2);
+}
+
+.promo-badge {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.promo-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.promo-images img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.promo-plus {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E88E5;
+    line-height: 1;
+}
+
+@media (max-width: 576px) {
+    .promo-images img {
+        height: 80px;
+    }
+    .promo-plus {
+        font-size: 22px;
+    }
+}
+
 /* ========== TARJETAS DE PRODUCTOS - CORREGIDAS PARA MÓVIL ========== */
 
 .producto {
