@@ -235,6 +235,294 @@ body {
     50% { transform: translateY(-20px); }
 }
 
+/* ========== COTIZA CON NOSOTROS ========== */
+
+.cotiza-section {
+    position: relative;
+    background: linear-gradient(135deg, #0D47A1 0%, #1E88E5 50%, #00796B 100%);
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+.cotiza-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
+
+.cotiza-bubble-1 {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    right: -80px;
+}
+
+.cotiza-bubble-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 40px;
+    left: -70px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cotiza-bubble-3 {
+    width: 110px;
+    height: 110px;
+    bottom: 18%;
+    right: 8%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Columna informativa */
+.cotiza-badge {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.cotiza-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.cotiza-subtitle {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.cotiza-features {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.cotiza-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.cotiza-feature-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.cotiza-feature-text h5 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.cotiza-feature-text p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Tarjeta del formulario */
+.cotiza-form-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 50px 45px;
+    box-shadow: 0 25px 60px rgba(13, 71, 161, 0.35);
+    position: relative;
+}
+
+.cotiza-form-icon {
+    position: absolute;
+    top: -28px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 22px;
+    box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4);
+    transform: rotate(-8deg);
+}
+
+.cotiza-form-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #00796b;
+    margin-bottom: 6px;
+}
+
+.cotiza-form-subtitle {
+    font-size: 15px;
+    color: #90a4ae;
+    margin-bottom: 30px;
+}
+
+/* Inputs con etiqueta flotante */
+.form-floating-custom {
+    position: relative;
+}
+
+.form-floating-custom input,
+.form-floating-custom select,
+.form-floating-custom textarea {
+    width: 100%;
+    padding: 22px 16px 8px 16px;
+    border: 2px solid #e3e9f0;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    background: #f8fafc;
+    transition: all 0.25s ease;
+    appearance: none;
+}
+
+.form-floating-custom textarea {
+    resize: none;
+    min-height: 110px;
+    padding-top: 26px;
+}
+
+.form-floating-custom input:focus,
+.form-floating-custom select:focus,
+.form-floating-custom textarea:focus {
+    outline: none;
+    border-color: #1E88E5;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.1);
+}
+
+.form-floating-custom label {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    font-size: 14px;
+    color: #90a4ae;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+.form-floating-custom label i {
+    margin-right: 6px;
+    width: 14px;
+    text-align: center;
+}
+
+.form-floating-custom input:focus + label,
+.form-floating-custom input:not(:placeholder-shown) + label,
+.form-floating-custom textarea:focus + label,
+.form-floating-custom textarea:not(:placeholder-shown) + label {
+    top: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1E88E5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-floating-select select {
+    padding-top: 26px;
+    cursor: pointer;
+}
+
+.form-floating-select label {
+    top: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1E88E5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-floating-select::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 18px;
+    top: 28px;
+    color: #90a4ae;
+    pointer-events: none;
+    font-size: 13px;
+}
+
+/* Botón de envío */
+.btn-cotizar {
+    width: 100%;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-cotizar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+}
+
+.btn-cotizar:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-cotizar i {
+    font-size: 20px;
+}
+
+.cotiza-disclaimer {
+    text-align: center;
+    font-size: 12.5px;
+    color: #90a4ae;
+    margin: 14px 0 0;
+}
+
+.cotiza-disclaimer i {
+    color: #1E88E5;
+    margin-right: 4px;
+}
+
 /* ========== PROCESO SECTION CON ONDAS ========== */
 
 .proceso-section {
@@ -627,6 +915,15 @@ body {
     .hero-stats {
         justify-content: space-around;
     }
+
+    .cotiza-title {
+        font-size: 32px;
+    }
+
+    .cotiza-form-card {
+        margin-top: 30px;
+        padding: 40px 32px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -669,6 +966,45 @@ body {
         font-size: 28px;
     }
     
+    .cotiza-section {
+        padding: 60px 0;
+    }
+
+    .cotiza-title {
+        font-size: 28px;
+    }
+
+    .cotiza-subtitle {
+        font-size: 15px;
+    }
+
+    .cotiza-form-card {
+        padding: 32px 22px;
+        border-radius: 18px;
+    }
+
+    .cotiza-form-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+        top: -22px;
+        right: 24px;
+    }
+
+    .cotiza-feature-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 17px;
+    }
+
+    .cotiza-feature-text h5 {
+        font-size: 15px;
+    }
+
+    .cotiza-feature-text p {
+        font-size: 13px;
+    }
+
     .proceso-section {
         padding: 50px 0;
     }
@@ -746,7 +1082,15 @@ body {
     .section-title {
         font-size: 24px;
     }
-    
+
+    .cotiza-title {
+        font-size: 24px;
+    }
+
+    .cotiza-form-card {
+        padding: 26px 18px;
+    }
+
     .wave-top svg,
     .wave-bottom svg,
     .navbar-wave svg,

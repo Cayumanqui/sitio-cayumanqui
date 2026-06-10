@@ -117,6 +117,136 @@
         </div>
     </section>
 
+    <!-- Cotiza con Nosotros -->
+    <section class="cotiza-section">
+        <!-- Onda superior -->
+        <div class="wave-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#e8f0fe" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+            </svg>
+        </div>
+
+        <!-- Burbujas decorativas -->
+        <div class="cotiza-bubble cotiza-bubble-1"></div>
+        <div class="cotiza-bubble cotiza-bubble-2"></div>
+        <div class="cotiza-bubble cotiza-bubble-3"></div>
+
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Información -->
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="cotiza-info">
+                        <span class="cotiza-badge">
+                            <i class="fas fa-calendar-check"></i> Eventos y Empresas
+                        </span>
+                        <h2 class="cotiza-title">Cotiza tu Pedido para tu Próximo Evento</h2>
+                        <p class="cotiza-subtitle">
+                            ¿Tienes una fiesta, celebración, festival o campaña en camino? Cuéntanos los detalles de tu evento y preparamos una propuesta a tu medida, con despacho incluido en Bío Bío y Ñuble.
+                        </p>
+
+                        <div class="cotiza-features">
+                            <div class="cotiza-feature-item">
+                                <div class="cotiza-feature-icon">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <div class="cotiza-feature-text">
+                                    <h5>Fiestas y Celebraciones</h5>
+                                    <p>Cumpleaños, matrimonios, aniversarios y reuniones familiares</p>
+                                </div>
+                            </div>
+                            <div class="cotiza-feature-item">
+                                <div class="cotiza-feature-icon">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <div class="cotiza-feature-text">
+                                    <h5>Festivales y Eventos Masivos</h5>
+                                    <p>Abastecimiento de agua y hielo para grandes asistencias</p>
+                                </div>
+                            </div>
+                            <div class="cotiza-feature-item">
+                                <div class="cotiza-feature-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="cotiza-feature-text">
+                                    <h5>Campañas y Empresas</h5>
+                                    <p>Convenios, despachos recurrentes y pedidos al por mayor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="cotiza-form-card">
+                        <div class="cotiza-form-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="cotiza-form-title">Solicita tu Cotización</h3>
+                        <p class="cotiza-form-subtitle">Completa el formulario y te contactaremos a la brevedad</p>
+
+                        <form id="cotizaForm" class="cotiza-form" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating-custom">
+                                        <input type="text" id="cotizaNombre" name="nombre" placeholder=" " required>
+                                        <label for="cotizaNombre"><i class="fas fa-user"></i> Nombre completo</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating-custom">
+                                        <input type="email" id="cotizaCorreo" name="correo" placeholder=" " required>
+                                        <label for="cotizaCorreo"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating-custom">
+                                        <input type="tel" id="cotizaTelefono" name="telefono" placeholder=" " required>
+                                        <label for="cotizaTelefono"><i class="fas fa-phone"></i> Número de teléfono</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating-custom form-floating-select">
+                                        <select id="cotizaEvento" name="evento" required>
+                                            <option value="" disabled selected hidden></option>
+                                            <option value="Fiesta">Fiesta</option>
+                                            <option value="Celebración">Celebración</option>
+                                            <option value="Festival">Festival</option>
+                                            <option value="Campaña">Campaña</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                        <label for="cotizaEvento"><i class="fas fa-tags"></i> Tipo de evento</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating-custom">
+                                        <textarea id="cotizaComentarios" name="comentarios" placeholder=" " rows="4"></textarea>
+                                        <label for="cotizaComentarios"><i class="fas fa-comment-dots"></i> Cuéntanos sobre tu evento (fecha, lugar, cantidad de personas...)</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-cotizar">
+                                <i class="fab fa-whatsapp"></i> Enviar Solicitud
+                            </button>
+
+                            <p class="cotiza-disclaimer">
+                                <i class="fas fa-shield-halved"></i> Tus datos solo se usarán para responder tu cotización.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+            </svg>
+        </div>
+    </section>
+
     <!-- Proceso Section con Ondas -->
     <section class="proceso-section">
         <!-- Onda superior -->
@@ -345,6 +475,39 @@
                 ]
             });
         });
+
+        // Formulario de Cotización -> WhatsApp
+        const cotizaForm = document.getElementById('cotizaForm');
+        if (cotizaForm) {
+            cotizaForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (!this.checkValidity()) {
+                    this.reportValidity();
+                    return;
+                }
+
+                const nombre = document.getElementById('cotizaNombre').value.trim();
+                const correo = document.getElementById('cotizaCorreo').value.trim();
+                const telefono = document.getElementById('cotizaTelefono').value.trim();
+                const evento = document.getElementById('cotizaEvento').value;
+                const comentarios = document.getElementById('cotizaComentarios').value.trim();
+
+                let mensaje = `¡Hola! Quisiera solicitar una cotización 💧\n\n`;
+                mensaje += `*Nombre:* ${nombre}\n`;
+                mensaje += `*Correo:* ${correo}\n`;
+                mensaje += `*Teléfono:* ${telefono}\n`;
+                mensaje += `*Tipo de evento:* ${evento}\n`;
+                if (comentarios) {
+                    mensaje += `*Comentarios:* ${comentarios}\n`;
+                }
+
+                const url = `https://wa.me/56952281586?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank');
+
+                this.reset();
+            });
+        }
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
