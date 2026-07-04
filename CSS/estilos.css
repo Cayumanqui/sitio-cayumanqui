@@ -235,6 +235,178 @@ body {
     50% { transform: translateY(-20px); }
 }
 
+/* ========== CRECE CON NOSOTROS ========== */
+
+.crece-section {
+    background: #F5F7FA;
+    padding: 90px 0;
+}
+
+.crece-oportunidad-badge {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+.crece-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+    transition: all 0.35s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.crece-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.14);
+}
+
+.crece-card-header {
+    padding: 36px 35px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.crece-header-equipo {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+}
+
+.crece-header-venta {
+    background: linear-gradient(135deg, #00ACC1 0%, #00796B 100%);
+}
+
+.crece-icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.crece-chip {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.5px;
+}
+
+.crece-card-body {
+    padding: 32px 35px 38px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.crece-card-body h3 {
+    font-size: 23px;
+    font-weight: 800;
+    color: #00796b;
+    margin-bottom: 12px;
+}
+
+.crece-card-body p {
+    font-size: 15px;
+    color: #546e7a;
+    line-height: 1.75;
+    margin-bottom: 22px;
+}
+
+.crece-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    flex: 1;
+}
+
+.crece-list li {
+    font-size: 14px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.crece-card-equipo .crece-list li i {
+    color: #1E88E5;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.crece-card-venta .crece-list li i {
+    color: #00796b;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.btn-crece {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-crece i {
+    font-size: 19px;
+}
+
+.btn-crece-equipo {
+    background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(30, 136, 229, 0.3);
+}
+
+.btn-crece-equipo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(30, 136, 229, 0.45);
+}
+
+.btn-crece-venta {
+    background: linear-gradient(135deg, #00ACC1 0%, #00796B 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 121, 107, 0.3);
+}
+
+.btn-crece-venta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 121, 107, 0.4);
+}
+
 /* ========== COTIZA CON NOSOTROS ========== */
 
 .cotiza-section {
@@ -924,6 +1096,14 @@ body {
         margin-top: 30px;
         padding: 40px 32px;
     }
+
+    .crece-card-header {
+        padding: 28px 25px 22px;
+    }
+
+    .crece-card-body {
+        padding: 26px 28px 32px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -966,6 +1146,29 @@ body {
         font-size: 28px;
     }
     
+    .crece-section {
+        padding: 60px 0;
+    }
+
+    .crece-card-header {
+        padding: 24px 22px 18px;
+        gap: 14px;
+    }
+
+    .crece-icon-wrap {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .crece-card-body {
+        padding: 22px 22px 28px;
+    }
+
+    .crece-card-body h3 {
+        font-size: 20px;
+    }
+
     .cotiza-section {
         padding: 60px 0;
     }

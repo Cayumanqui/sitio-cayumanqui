@@ -117,12 +117,75 @@
         </div>
     </section>
 
+    <!-- Crece con Nosotros -->
+    <section class="crece-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="crece-oportunidad-badge">
+                    <i class="fas fa-rocket"></i> Oportunidades Cayumanqui
+                </span>
+                <h2 class="section-title">¿Listo para Crecer con Nosotros?</h2>
+                <p class="section-subtitle">Dos caminos para ser parte de la familia Cayumanqui</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card Equipo -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+                    <div class="crece-card crece-card-equipo">
+                        <div class="crece-card-header crece-header-equipo">
+                            <div class="crece-icon-wrap">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="crece-chip">Oferta Laboral</span>
+                        </div>
+                        <div class="crece-card-body">
+                            <h3>Únete a Nuestro Equipo</h3>
+                            <p>¿Buscas una oportunidad laboral? Somos una empresa en constante crecimiento y siempre estamos buscando personas comprometidas y con ganas de trabajar.</p>
+                            <ul class="crece-list">
+                                <li><i class="fas fa-check-circle"></i> Trabajo estable y buen ambiente laboral</li>
+                                <li><i class="fas fa-check-circle"></i> Empresa regional en expansión</li>
+                                <li><i class="fas fa-check-circle"></i> Reales oportunidades de crecimiento</li>
+                            </ul>
+                            <button class="btn-crece btn-crece-equipo" onclick="abrirWhatsApp('equipo')">
+                                <i class="fab fa-whatsapp"></i> Me interesa, contáctenme
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Punto de Venta -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+                    <div class="crece-card crece-card-venta">
+                        <div class="crece-card-header crece-header-venta">
+                            <div class="crece-icon-wrap">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <span class="crece-chip">Emprendimiento</span>
+                        </div>
+                        <div class="crece-card-body">
+                            <h3>Sé un Punto de Venta</h3>
+                            <p>¿Tienes un local o negocio y quieres aumentar tus ingresos? Vende nuestros bidones de agua y hielo. Nosotros te abastecemos, tú solo te enfocas en vender.</p>
+                            <ul class="crece-list">
+                                <li><i class="fas fa-check-circle"></i> Precios preferenciales de distribuidor</li>
+                                <li><i class="fas fa-check-circle"></i> Despacho directo a tu local</li>
+                                <li><i class="fas fa-check-circle"></i> Productos de alta rotación y demanda</li>
+                            </ul>
+                            <button class="btn-crece btn-crece-venta" onclick="abrirWhatsApp('venta')">
+                                <i class="fab fa-whatsapp"></i> Quiero ser punto de venta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Cotiza con Nosotros -->
     <section class="cotiza-section">
         <!-- Onda superior -->
         <div class="wave-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path fill="#e8f0fe" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
             </svg>
         </div>
 
@@ -475,6 +538,17 @@
                 ]
             });
         });
+
+        // Botones "Crece con Nosotros" -> WhatsApp
+        function abrirWhatsApp(tipo) {
+            let mensaje;
+            if (tipo === 'equipo') {
+                mensaje = '¡Hola! Estoy interesado/a en ser parte del equipo de Aguas Cayumanqui. ¿Podrían darme más información?';
+            } else {
+                mensaje = '¡Hola! Me interesa convertirme en punto de venta de Aguas Cayumanqui. ¿Cuáles son los requisitos?';
+            }
+            window.open('https://wa.me/56952281586?text=' + encodeURIComponent(mensaje), '_blank');
+        }
 
         // Formulario de Cotización -> WhatsApp
         const cotizaForm = document.getElementById('cotizaForm');
