@@ -171,57 +171,76 @@
     padding: 80px 0 100px;
 }
 
+.sol-problema-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .sol-problema-card {
-    background: #fff;
-    border-radius: 18px;
-    padding: 32px 28px;
-    height: 100%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.04);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol-problema-card::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 70%;
+    height: 70%;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .sol-problema-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    transform: translateY(-8px) scale(1.06);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.22);
 }
 
-.sol-problema-icon {
-    width: 62px;
-    height: 62px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.sol-problema-icon i {
-    font-size: 1.5rem;
+.sol-problema-card i {
+    font-size: 2.2rem;
     color: #fff;
 }
 
 .sol-problema-card h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1a2744;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-.sol-problema-card p {
-    font-size: 0.9rem;
+.sol-problema-desc {
+    font-size: 0.85rem;
     color: #5a6a7e;
-    line-height: 1.65;
-    margin-bottom: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 240px;
 }
 
 .sol-problema-tag {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: #1565C0;
     background: #e3f2fd;
-    padding: 5px 12px;
+    padding: 4px 12px;
     border-radius: 50px;
 }
 
@@ -339,6 +358,58 @@
     background: rgba(255,255,255,0.2);
     color: #fff;
     text-decoration: none;
+}
+
+/* --- Filtro de Categorías --- */
+.sol-filtro-sticky {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 12px 0;
+    margin-bottom: 0;
+}
+
+.sol-filtro-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+}
+
+.sol-filtro-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.sol-filtro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #546e7a;
+    background: #f0f4f8;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.sol-filtro-btn:hover,
+.sol-filtro-btn.active {
+    background: #1E88E5;
+    color: #fff;
+    border-color: #1E88E5;
+    text-decoration: none;
+}
+
+.sol-filtro-btn i {
+    font-size: 0.78rem;
 }
 
 /* --- Productos --- */
@@ -586,6 +657,19 @@
     .sol-video-wrap {
         max-width: 100%;
     }
+    .sol-problema-card {
+        width: 150px;
+        height: 150px;
+    }
+    .sol-problema-card i {
+        font-size: 1.7rem;
+    }
+    .sol-problema-card h4 {
+        font-size: 0.78rem;
+    }
+    .sol-problema-desc {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -594,5 +678,17 @@
     }
     .sol-hero-icon-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .sol-problema-card {
+        width: 130px;
+        height: 130px;
+        gap: 8px;
+        padding: 18px;
+    }
+    .sol-problema-card i {
+        font-size: 1.5rem;
+    }
+    .sol-problema-card h4 {
+        font-size: 0.72rem;
     }
 }
