@@ -33,7 +33,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="Imagenes/Logo.png" alt="Logo Cayumanqui" class="logo">
-                <span class="d-none d-md-inline">AGUAS CAYUMANQUI</span>
+                <span class="d-none d-xl-inline">AGUAS CAYUMANQUI</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -45,6 +45,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="HTML/productos.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML/soluciones.html">Soluciones Hídricas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="HTML/nosotros.html">Acerca de Nosotros</a>
@@ -129,25 +132,25 @@
             </div>
 
             <div class="row g-4">
-                <!-- Card Equipo -->
+                <!-- Card Empresas -->
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
                     <div class="crece-card crece-card-equipo">
                         <div class="crece-card-header crece-header-equipo">
                             <div class="crece-icon-wrap">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-building"></i>
                             </div>
-                            <span class="crece-chip">Oferta Laboral</span>
+                            <span class="crece-chip">Clientes Empresariales</span>
                         </div>
                         <div class="crece-card-body">
-                            <h3>Únete a Nuestro Equipo</h3>
-                            <p>¿Buscas una oportunidad laboral? Somos una empresa en constante crecimiento y siempre estamos buscando personas comprometidas y con ganas de trabajar.</p>
+                            <h3>Agua para tu Empresa o Negocio</h3>
+                            <p>Restaurantes, hoteles, colegios, empresas o cualquier negocio que necesite agua purificada o hielo en volumen. Trabajamos con convenios y despachos programados.</p>
                             <ul class="crece-list">
-                                <li><i class="fas fa-check-circle"></i> Trabajo estable y buen ambiente laboral</li>
-                                <li><i class="fas fa-check-circle"></i> Empresa regional en expansión</li>
-                                <li><i class="fas fa-check-circle"></i> Reales oportunidades de crecimiento</li>
+                                <li><i class="fas fa-check-circle"></i> Precio especial por volumen</li>
+                                <li><i class="fas fa-check-circle"></i> Despacho programado y puntual</li>
+                                <li><i class="fas fa-check-circle"></i> Boletas y facturas disponibles</li>
                             </ul>
-                            <button class="btn-crece btn-crece-equipo" onclick="abrirWhatsApp('equipo')">
-                                <i class="fab fa-whatsapp"></i> Me interesa, contáctenme
+                            <button class="btn-crece btn-crece-equipo" onclick="abrirWhatsApp('empresas')">
+                                <i class="fab fa-whatsapp"></i> Consultar abastecimiento
                             </button>
                         </div>
                     </div>
@@ -542,8 +545,8 @@
         // Botones "Crece con Nosotros" -> WhatsApp
         function abrirWhatsApp(tipo) {
             let mensaje;
-            if (tipo === 'equipo') {
-                mensaje = '¡Hola! Estoy interesado/a en ser parte del equipo de Aguas Cayumanqui. ¿Podrían darme más información?';
+            if (tipo === 'empresas') {
+                mensaje = '¡Hola! Me interesa el abastecimiento de agua y/o hielo para mi empresa o negocio. ¿Podrían darme más información sobre precios y convenios?';
             } else {
                 mensaje = '¡Hola! Me interesa convertirme en punto de venta de Aguas Cayumanqui. ¿Cuáles son los requisitos?';
             }

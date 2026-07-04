@@ -42,7 +42,9 @@ html, body {
 .custom-navbar .navbar-nav .nav-link {
     color: white;
     font-weight: 500;
-    padding: 8px 15px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
   

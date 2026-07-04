@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Hídricas - Cayumanqui</title>
+    <link rel="icon" type="image/png" href="../Imagenes/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="../CSS/soluciones.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../Imagenes/Logo.png" alt="Logo Cayumanqui" class="logo">
+                <span class="d-none d-xl-inline">AGUAS CAYUMANQUI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="soluciones.html">Soluciones Hídricas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wa.me/56952281586" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="sol-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="sol-hero-badge">
+                        <i class="fas fa-water"></i> Tratamiento Profesional de Agua
+                    </span>
+                    <h1 class="sol-hero-title">Soluciones Hídricas para Cada Problema</h1>
+                    <p class="sol-hero-subtitle">
+                        Agua turbia, con hierro, sarro, manganeso o mal sabor. Identificamos el problema en tu agua y te entregamos el equipo y solución correcta para tu hogar, empresa o campo.
+                    </p>
+                    <div class="sol-hero-buttons">
+                        <a href="#productos" class="btn-primary-custom">
+                            Ver Productos <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/56952281586?text=Hola%2C%20quisiera%20asesor%C3%ADa%20sobre%20tratamiento%20de%20agua." class="btn-outline-custom" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pedir Asesoría
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="sol-hero-icon-grid">
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-water"></i>
+                            <span>Turbidez</span>
+                        </div>
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-magnet"></i>
+                            <span>Hierro</span>
+                        </div>
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Sarro</span>
+                        </div>
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Manganeso</span>
+                        </div>
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Bacterias</span>
+                        </div>
+                        <div class="sol-hero-icon-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Mal olor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Problemas que Resolvemos -->
+    <section class="sol-problemas">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Problemas que Resolvemos</h2>
+                <p class="section-subtitle">Diagnóstico y solución para los problemas más comunes del agua en Chile</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#1E88E5,#0D47A1)">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h4>Turbidez</h4>
+                        <p>Agua con aspecto sucio, nublado o con partículas visibles. Causado por sedimentos, arcilla o tierra en suspensión.</p>
+                        <span class="sol-problema-tag">Filtros Multimedia · Zeolita · Sedimento</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#E65100,#BF360C)">
+                            <i class="fas fa-magnet"></i>
+                        </div>
+                        <h4>Hierro</h4>
+                        <p>Agua con color rojizo o amarillento, manchas en ropa y sanitarios, sabor metálico. Frecuente en pozos y zonas rurales.</p>
+                        <span class="sol-problema-tag">Filtros Multimedia · Ósmosis Inversa</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#00796B,#004D40)">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h4>Sarro / Dureza</h4>
+                        <p>Depósitos blancos en cañerías, electrodomésticos y duchas. El agua dura daña equipos y genera gasto extra en detergentes.</p>
+                        <span class="sol-problema-tag">Ablandadores de Agua · Resinas</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#6A1B9A,#4A148C)">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Manganeso</h4>
+                        <p>Manchas negras o café oscuro en superficies, sabor astringente y agua con apariencia oscura al calentarse.</p>
+                        <span class="sol-problema-tag">Filtros Multimedia · Zeolita</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#00838F,#006064)">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h4>Bacterias y Virus</h4>
+                        <p>Agua microbiológicamente contaminada, riesgo para la salud. Crítico en zonas con pozos, agua de río o sistemas sin tratamiento.</p>
+                        <span class="sol-problema-tag">Lámparas UV · Ósmosis Inversa</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="sol-problema-card">
+                        <div class="sol-problema-icon" style="background: linear-gradient(135deg,#558B2F,#33691E)">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h4>Mal Sabor u Olor</h4>
+                        <p>Olor a cloro, azufre o agua con gusto desagradable. Afecta la calidad de vida y el consumo de agua en el hogar.</p>
+                        <span class="sol-problema-tag">Filtros de Carbón Activado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonial -->
+    <section class="sol-video-section">
+        <div class="wave-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#F5F7FA" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title" style="color:#ffffff;">Lo que Dicen Nuestros Clientes</h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.85);">Experiencias reales con Aguas Cayumanqui</p>
+            </div>
+            <div class="sol-video-wrap" data-aos="zoom-in" data-aos-delay="100">
+                <div class="sol-tiktok-card">
+                    <div class="sol-tiktok-header">
+                        <div class="sol-tiktok-logo">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <div>
+                            <strong>@aguas.cayumanqui</strong>
+                            <p>Cliente satisfecho comparte su experiencia</p>
+                        </div>
+                    </div>
+                    <div class="sol-tiktok-embed">
+                        <blockquote class="tiktok-embed"
+                            cite="https://www.tiktok.com/@aguas.cayumanqui/video/7651637853390245141"
+                            data-video-id="7651637853390245141"
+                            style="max-width:100%; min-width: 280px;">
+                            <section></section>
+                        </blockquote>
+                    </div>
+                    <a href="https://www.tiktok.com/@aguas.cayumanqui/video/7651637853390245141"
+                       target="_blank" class="sol-tiktok-cta">
+                        <i class="fab fa-tiktok"></i> Ver en TikTok
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Productos por Categoría -->
+    <section class="sol-productos" id="productos">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Nuestros Productos</h2>
+                <p class="section-subtitle">Equipos de tratamiento de agua con precios competitivos. Consulta disponibilidad.</p>
+            </div>
+
+            <!-- Ósmosis Inversa -->
+            <div class="sol-categoria" data-aos="fade-up">
+                <div class="sol-cat-header">
+                    <i class="fas fa-cogs"></i> Ósmosis Inversa
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Portada-250-LPH-300x300.webp" alt="Ósmosis Inversa 250 L/H">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ósmosis Inversa 250 L/H</h5>
+                                <div class="sol-precio">$2.220.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20la%20%C3%93smosis%20Inversa%20250%20L%2FH.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/1200gpd-300x300.webp" alt="Ósmosis Inversa 1200G">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ósmosis Inversa 1200G</h5>
+                                <div class="sol-precio">$1.560.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20la%20%C3%93smosis%20Inversa%201200G.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card agotado">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Osmosis-Residencial-100G-300x300.webp" alt="Purificador Ósmosis Premium 6 etapas">
+                                <span class="badge-agotado">Agotado</span>
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Purificador Ósmosis Premium 6 Etapas</h5>
+                                <div class="sol-precio agotado-precio">$276.000</div>
+                                <button class="btn-sol-agotado" disabled>Sin Stock</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card agotado">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Planta-1000-LPH-3-300x300.webp" alt="Ósmosis Inversa 1000 L/H">
+                                <span class="badge-agotado">Agotado</span>
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ósmosis Inversa 1000 L/H</h5>
+                                <div class="sol-precio agotado-precio">$7.860.000</div>
+                                <button class="btn-sol-agotado" disabled>Sin Stock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ablandadores -->
+            <div class="sol-categoria" data-aos="fade-up">
+                <div class="sol-cat-header">
+                    <i class="fas fa-shower"></i> Ablandadores de Agua
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Ablandador-100L-Flowmeter-300x300.webp" alt="Ablandador 1465-100 Litros">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ablandador 1465 – 100 Litros</h5>
+                                <div class="sol-precio">$1.279.200</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Ablandador%201465%20de%20100%20Litros.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Conector-Recto-So-25mm-x-So-25mm-4-300x300.webp" alt="Ablandador 1054-50 Litros">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ablandador 1054 – 50 Litros</h5>
+                                <div class="sol-precio">$804.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Ablandador%201054%20de%2050%20Litros.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Conector-Recto-So-25mm-x-So-25mm-4-300x300.webp" alt="Ablandador 835">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ablandador de Agua 835</h5>
+                                <div class="sol-precio">$750.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Ablandador%20835.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card agotado">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Ablandador-Home-300x300.webp" alt="Ablandador 3000 LPH Home">
+                                <span class="badge-agotado">Agotado</span>
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Ablandador 3000 LPH Home</h5>
+                                <div class="sol-precio agotado-precio">$708.000</div>
+                                <button class="btn-sol-agotado" disabled>Sin Stock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="sol-categoria" data-aos="fade-up">
+                <div class="sol-cat-header">
+                    <i class="fas fa-filter"></i> Filtros – Multimedia, Zeolita y Sedimento
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Filtro-Purificador-multimedia--300x300.webp" alt="Filtro Multimedia FRP 14x65">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro Multimedia FRP 14x65</h5>
+                                <div class="sol-precio">$1.332.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20Multimedia%20FRP%2014x65.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Filtro-Zeolita-287x300.webp" alt="Filtro de Zeolita 14x65">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro de Zeolita 14x65</h5>
+                                <div class="sol-precio">$839.880</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20de%20Zeolita%2014x65.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/FRP-14x65-100-LITROS-300x300.webp" alt="FRP 1465 2.5">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Estanque FRP 1465 – 2,5″</h5>
+                                <div class="sol-precio">$270.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Estanque%20FRP%201465.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/7-300x300.webp" alt="Filtro PP 20in 1 micrón">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro PP 20in – 1 Micrón</h5>
+                                <div class="sol-precio">$10.200</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20PP%2020in%201%20micr%C3%B3n.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/7-300x300.webp" alt="Filtro PP 20in 5 micrón">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro PP 20in – 5 Micrón</h5>
+                                <div class="sol-precio">$9.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20PP%2020in%205%20micr%C3%B3n.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/CTO-300x300.webp" alt="Filtro Carbón CTO 20in">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro Carbón Activado CTO 20″</h5>
+                                <div class="sol-precio">$17.988</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20Carbon%20CTO%2020in.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/UDF-300x300.webp" alt="Filtro Carbón UDF 20in">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Filtro Carbón Activado UDF 20″</h5>
+                                <div class="sol-precio">$17.988</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20el%20Filtro%20Carbon%20UDF%2020in.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lámparas UV -->
+            <div class="sol-categoria" data-aos="fade-up">
+                <div class="sol-cat-header">
+                    <i class="fas fa-sun"></i> Lámparas Ultravioleta (UV)
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Diseno-sin-titulo-17-300x300.webp" alt="Lámpara UV 8 GPM 30W">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Lámpara UV 8 GPM – 30W</h5>
+                                <div class="sol-precio">$213.600</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20la%20L%C3%A1mpara%20UV%208%20GPM%2030W.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resinas -->
+            <div class="sol-categoria" data-aos="fade-up">
+                <div class="sol-cat-header">
+                    <i class="fas fa-atom"></i> Resinas de Intercambio Iónico
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Resina-Anionica-300x300.webp" alt="Resina Aniónica Fuerte">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Resina Aniónica Fuerte</h5>
+                                <div class="sol-precio">$138.000</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20la%20Resina%20Ani%C3%B3nica%20Fuerte.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="sol-prod-card">
+                            <div class="sol-prod-img">
+                                <img src="../img_soluciones/Resina-Cationica-Fuerte-300x300.webp" alt="Resina Catiónica Fuerte">
+                            </div>
+                            <div class="sol-prod-info">
+                                <h5>Resina Catiónica Fuerte</h5>
+                                <div class="sol-precio">$118.200</div>
+                                <a href="https://wa.me/56952281586?text=Hola%2C%20me%20interesa%20la%20Resina%20Cati%C3%B3nica%20Fuerte.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="btn-sol-consultar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="sol-cta-final">
+        <div class="wave-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#ffffff" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+            </svg>
+        </div>
+        <div class="container text-center" data-aos="fade-up">
+            <i class="fas fa-water sol-cta-icon"></i>
+            <h2>¿No Encuentras lo que Buscas?</h2>
+            <p>Cuéntanos el problema de tu agua y te asesoramos sin costo para encontrar la solución correcta.</p>
+            <a href="https://wa.me/56952281586?text=Hola%2C%20quisiera%20asesor%C3%ADa%20sobre%20tratamiento%20de%20agua." class="btn-primary-custom btn-lg" target="_blank">
+                <i class="fab fa-whatsapp"></i> Pedir Asesoría Gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#263238" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,96C840,107,960,117,1080,117.3C1200,117,1320,107,1380,101.3L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+            </svg>
+        </div>
+        <div class="pie-pagina">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <img src="../Imagenes/Logo.png" alt="Logo Cayumanqui" class="logo-footer">
+                        <p class="footer-text">
+                            Empresa dedicada a la distribución de agua purificada y soluciones hídricas de alta calidad en las regiones de Bío Bío y Ñuble.
+                        </p>
+                        <div class="iconos-redes">
+                            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/56952281586" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Enlaces Rápidos</h5>
+                        <ul class="footer-links">
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="productos.html">Catálogo de Productos</a></li>
+                            <li><a href="soluciones.html">Soluciones Hídricas</a></li>
+                            <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contacto</h5>
+                        <p class="footer-contact">
+                            <i class="fas fa-phone"></i> +569 52281586<br>
+                            <i class="fas fa-phone"></i> +569 21829290<br>
+                            <i class="fas fa-envelope"></i> aguasdelcayumanqui@gmail.com<br>
+                            <i class="fas fa-map-marker-alt"></i> Av. Bernardo O'higgins Poniente 1780, Quillón, Ñuble<br>
+                            <i class="fas fa-certificate"></i> Res. Sanitaria: 2016439392
+                        </p>
+                    </div>
+                </div>
+                <hr class="footer-divider">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-copyright">&copy; 2025 Aguas Cayumanqui. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/56952281586" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.tiktok.com/embed.js" async></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.custom-navbar');
+            navbar.style.boxShadow = window.scrollY > 50
+                ? '0 4px 20px rgba(0,0,0,0.15)'
+                : '0 2px 15px rgba(0,0,0,0.1)';
+        });
+    </script>
+</body>
+</html>

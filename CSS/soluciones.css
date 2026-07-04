@@ -1,0 +1,598 @@
+/* ========== SOLUCIONES HÍDRICAS ========== */
+
+/* --- Hero --- */
+.sol-hero {
+    background: linear-gradient(135deg, #0D47A1 0%, #1565C0 40%, #00838F 100%);
+    padding: 140px 0 180px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.sol-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.sol-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: -60px;
+    width: 260px;
+    height: 260px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+
+.sol-hero .wave-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.sol-hero .wave-bottom svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.sol-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.sol-hero-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sol-hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 520px;
+}
+
+.sol-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #fff, #e3f2fd);
+    color: #0D47A1;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    color: #0D47A1;
+    text-decoration: none;
+}
+
+.btn-outline-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(255,255,255,0.7);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Hero icon grid */
+.sol-hero-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+}
+
+.sol-hero-icon-item {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.sol-hero-icon-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-4px);
+}
+
+.sol-hero-icon-item i {
+    font-size: 1.8rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sol-hero-icon-item span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Problemas --- */
+.sol-problemas {
+    background: #F5F7FA;
+    padding: 80px 0 100px;
+}
+
+.sol-problema-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.sol-problema-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.sol-problema-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.sol-problema-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.sol-problema-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 10px;
+}
+
+.sol-problema-card p {
+    font-size: 0.9rem;
+    color: #5a6a7e;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.sol-problema-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1565C0;
+    background: #e3f2fd;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+/* --- Video Section --- */
+.sol-video-section {
+    background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #00838F 100%);
+    padding: 100px 0 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol-video-section .wave-top {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.sol-video-section .wave-top svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.sol-video-section .wave-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.sol-video-section .wave-bottom svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.sol-video-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.sol-tiktok-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.sol-tiktok-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sol-tiktok-logo {
+    width: 44px;
+    height: 44px;
+    background: #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.sol-tiktok-header strong {
+    display: block;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.sol-tiktok-header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.sol-tiktok-embed {
+    background: #000;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sol-tiktok-embed .tiktok-embed {
+    width: 100%;
+}
+
+.sol-tiktok-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.sol-tiktok-cta:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- Productos --- */
+.sol-productos {
+    background: #fff;
+    padding: 80px 0 100px;
+}
+
+.sol-categoria {
+    margin-bottom: 60px;
+}
+
+.sol-categoria:last-child {
+    margin-bottom: 0;
+}
+
+.sol-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a2744;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #1E88E5;
+}
+
+.sol-cat-header i {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #1E88E5, #0D47A1);
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.sol-prod-card {
+    background: #fff;
+    border: 1px solid #e8edf4;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sol-prod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+}
+
+.sol-prod-card.agotado {
+    opacity: 0.75;
+}
+
+.sol-prod-card.agotado:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.sol-prod-img {
+    position: relative;
+    background: #f8fafc;
+    padding: 24px;
+    text-align: center;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+.sol-prod-img img {
+    width: 100%;
+    max-width: 180px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.badge-agotado {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ef5350;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.sol-prod-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.sol-prod-info h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a2744;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.sol-precio {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1E88E5;
+}
+
+.sol-precio.agotado-precio {
+    color: #90a4ae;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.btn-sol-consultar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-sol-consultar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-sol-agotado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e0e0;
+    color: #9e9e9e;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    margin-top: auto;
+}
+
+/* --- CTA Final --- */
+.sol-cta-final {
+    background: linear-gradient(135deg, #0D47A1 0%, #1565C0 60%, #00838F 100%);
+    padding: 100px 0 80px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol-cta-final .wave-top {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.sol-cta-final .wave-top svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.sol-cta-icon {
+    font-size: 3rem;
+    color: rgba(255,255,255,0.5);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.sol-cta-final h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.sol-cta-final p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+    .sol-hero {
+        padding: 120px 0 160px;
+        text-align: center;
+    }
+    .sol-hero-subtitle {
+        max-width: 100%;
+    }
+    .sol-hero-buttons {
+        justify-content: center;
+    }
+    .sol-hero-icon-grid {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sol-hero {
+        padding: 110px 0 150px;
+    }
+    .sol-hero-icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+    .sol-hero-icon-item {
+        padding: 14px 6px;
+    }
+    .sol-hero-icon-item i {
+        font-size: 1.3rem;
+    }
+    .sol-hero-icon-item span {
+        font-size: 0.7rem;
+    }
+    .sol-video-wrap {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sol-cat-header {
+        font-size: 1.05rem;
+    }
+    .sol-hero-icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
